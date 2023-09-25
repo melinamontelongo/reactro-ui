@@ -8,9 +8,9 @@ export type ThemeProviderProps = {
 };
 
 const ThemeProvider = ({ children, theme }: ThemeProviderProps) => {
-    console.log("THEME",theme)
+    console.log("THEME", theme)
     return (
-        <SCThemeProvider theme={themes[theme || "strawberries"]}>
+        <SCThemeProvider theme={themes[theme]}>
             {children}
         </SCThemeProvider>
     )

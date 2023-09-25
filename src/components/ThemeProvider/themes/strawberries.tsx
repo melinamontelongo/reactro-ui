@@ -1,21 +1,30 @@
 import base from "./base";
 
 const colors = {
-    background: "#FFC4B5",
-    accent: "#FF3C42",
-    hover: "#ffb29e",
-    active: "#ffa891",
-    shadow: "#ff987d",
+    primary: {
+        bg: "#FFC4B5",
+        color: "#ff474d",
 
-    /*     primary: "#FFC4B5",
-       
-        secondary: "#f5ddcb",
-        secondaryHover: "#f7d7be",
-        secondaryActive: "#fad5b9",
-    
-        primaryAccent: "#FF3C42",
-        secondaryAccent: "#E8817E", */
+        hoverBg: "#ffd0c4",
+        hoverColor: "#ff545a",
 
+        activeBg: "#f5b2a2",
+        activeColor: "#d9363b",
+
+        shadow: "#ff8c7d",
+    },
+    secondary: {
+        bg: "#87FFA9",
+        color: "#3BB35D",
+
+        hoverBg: "#9cffb8",
+        hoverColor: "#45c469",
+
+        activeBg: "#74ed96",
+        activeColor: "#319e50",
+
+        shadow: "#5ac479",  
+    }
 };
 
 const strawberries = {

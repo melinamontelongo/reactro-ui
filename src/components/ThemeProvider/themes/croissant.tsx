@@ -1,11 +1,30 @@
 import base from "./base";
 
 const colors = {
-    background: "#BF7636",
-    accent: "#BF5B21",
-    hover: "#8C311C",
-    active: "#591E18",
-    shadow: "#591E18" 
+    primary: {
+        bg: "#F1A23E",
+        color: "#A6270A",
+
+        hoverBg: "#f7aa48",
+        hoverColor: "#b52f10",
+
+        activeBg: "#e09434",
+        activeColor: "#912006",
+
+        shadow: "#BF3803",
+    },
+    secondary: {
+        bg: "#F2DA91",
+        color: "#cc7125",
+
+        hoverBg: "#fce6a2",
+        hoverColor: "#de7e2f",
+
+        activeBg: "#e3cb81",
+        activeColor: "#b5611b",
+
+        shadow: "#F18429",
+    },
 };
 
 const croissant = {

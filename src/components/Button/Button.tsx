@@ -2,14 +2,44 @@ import React from "react";
 import styled from "styled-components";
 import { ButtonProps } from "./Button.d";
 
+const getVariantStyles = (props) => {
+    let styles;
+    props.$primary ?
+        styles = `
+        color: ${props.theme.colors.primary.color};
+        background-color:  ${props.theme.colors.primary.bg};
+        border: 4px outset ${props.theme.colors.primary.shadow};
+        &:hover {
+            background-color:  ${props.theme.colors.primary.hoverBg};
+            color:  ${props.theme.colors.primary.hoverColor};
+        }
+        &:active {
+            background-color:  ${props.theme.colors.primary.activeBg};
+            color:  ${props.theme.colors.primary.activeColor};
+            border: 4px inset ${props.theme.colors.primary.shadow};
+        }`
+        :
+        styles = `
+        color: ${props.theme.colors.secondary.color};
+        background-color:  ${props.theme.colors.secondary.bg};
+        border: 4px outset ${props.theme.colors.secondary.shadow};
+        &:hover {
+            background-color:  ${props.theme.colors.secondary.hoverBg};
+            color:  ${props.theme.colors.secondary.hoverColor};
+        }
+        &:active {
+            background-color:  ${props.theme.colors.secondary.activeBg};
+            color:  ${props.theme.colors.secondary.activeColor};
+            border: 4px inset ${props.theme.colors.secondary.shadow};
+        }`
+    return styles;
+}
 const StyledButton = styled.button<ButtonProps>`
-  border: 0;
   line-height: 1;
   font-size: 15px;
   cursor: pointer;
   font-weight: 700;
   font-weight: bold;
-  border-radius: 3px;
   display: inline-block;
   padding: ${(props) =>
         props.size === "small"
@@ -17,24 +47,13 @@ const StyledButton = styled.button<ButtonProps>`
             : props.size === "medium"
                 ? "9px 30px 11px"
                 : "14px 30px 16px"};
-  color: ${(props) => (props.$primary ? "#1b116e" : "#ffffff")};
-  background-color: ${(props) => (props.$primary ? "#6bedb5" : "#1b116e")};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-  &:hover {
-    background-color: ${(props) => (props.$primary ? "#55bd90" : "#6bedb5")};
-  }
-  &:active {
-    border: solid 2px #1b116e;
-    padding: ${(props) =>
-        props.size === "small"
-            ? "5px 23px 6px"
-            : props.size === "medium"
-                ? "7px 28px 9px"
-                : "12px 28px 14px"};
+    ${(props) => getVariantStyles(props)}
   }
 `;
 
 const Button = ({ size, $primary, disabled, text, onClick, ...props }: ButtonProps) => {
+    console.log("PROPS FROM COMPONENT", props)
     return (
         <StyledButton
             type="button"
