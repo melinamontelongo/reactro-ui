@@ -44,7 +44,7 @@ export const Small: Story = (args) => (
 Small.args = {
   $primary: true,
   disabled: false,
-  size: "small",
+  size: "sm",
   text: "Small",
 };
 
@@ -54,7 +54,7 @@ export const Medium: Story = (args) => (
 Medium.args = {
   $primary: true,
   disabled: false,
-  size: "medium",
+  size: "md",
   text: "Medium",
 };
 
@@ -64,6 +64,6 @@ export const Large: Story = (args) => (
 Large.args = {
   $primary: true,
   disabled: false,
-  size: "large",
+  size: "lg",
   text: "Large",
 };

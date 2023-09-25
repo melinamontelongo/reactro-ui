@@ -4,6 +4,6 @@ export interface ButtonProps {
   text?: string;
   $primary?: boolean;
   disabled?: boolean;
-  size?: "small" | "medium" | "large";
+  size?: "sm" | "md" | "lg";
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }

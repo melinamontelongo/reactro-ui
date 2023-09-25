@@ -34,6 +34,27 @@ const getVariantStyles = (props) => {
         }`
     return styles;
 }
+const getVariantSize = (props) => {
+    let sizes;
+    switch (props.size) {
+        case "sm":
+            sizes = `
+            padding: 7px 10px 8px;
+            `
+            break;
+        case "md":
+            sizes = `
+            padding: 9px 25px 11px;
+            `
+            break;
+        case "lg":
+            sizes = `
+                padding: 14px 30px 16px;
+                `
+            break
+    }
+    return sizes;
+}
 const StyledButton = styled.button<ButtonProps>`
   line-height: 1;
   font-size: 15px;
@@ -41,19 +62,13 @@ const StyledButton = styled.button<ButtonProps>`
   font-weight: 700;
   font-weight: bold;
   display: inline-block;
-  padding: ${(props) =>
-        props.size === "small"
-            ? "7px 25px 8px"
-            : props.size === "medium"
-                ? "9px 30px 11px"
-                : "14px 30px 16px"};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
+  ${(props) => getVariantSize(props)}
     ${(props) => getVariantStyles(props)}
   }
 `;
 
-const Button = ({ size, $primary, disabled, text, onClick, ...props }: ButtonProps) => {
-    console.log("PROPS FROM COMPONENT", props)
+const Button = ({ size = "md", $primary, disabled, text, onClick, ...props }: ButtonProps) => {
     return (
         <StyledButton
             type="button"
