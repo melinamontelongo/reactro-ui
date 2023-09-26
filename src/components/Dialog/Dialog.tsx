@@ -9,7 +9,6 @@ const ContentContainer = styled.div<Pick<DialogProps, "height">>`
     flex-direction: column;
     justify-content: space-between;
     padding: 5px 10px;
-    color: ${(props) => props.theme.colors.primary.color};
 `
 const Title = styled.h2`
   font-size: 20px;
