@@ -56,10 +56,10 @@ background-color: ${(props) => props.theme.colors.baseLighter};
     display: none;
 }
 `
-const Radio = ({ id, name, value, label, $primary, checked }: RadioProps) => {
+const Radio = ({ id, name, value, label, $primary, defaultChecked }: RadioProps) => {
     return (
         <Label $primary={$primary}>{label}
-            <Input type="radio" id={id} name={name} value={value} checked={checked} />
+            <Input type="radio" id={id} name={name} value={value} defaultChecked={defaultChecked} />
             <Checkmark className="checkmark" $primary={$primary} />
         </Label>
     )

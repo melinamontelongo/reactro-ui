@@ -4,5 +4,5 @@ export interface RadioProps {
     name: string,
     label: string,
     $primary?: boolean,
-    checked?: boolean,
+    defaultChecked?: boolean,
 }

@@ -3,5 +3,5 @@ export interface CheckboxProps{
     value: string,
     label: string,
     $primary?: boolean,
-    checked?: boolean,
+    defaultChecked?: boolean,
 }

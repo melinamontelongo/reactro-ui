@@ -21,7 +21,7 @@ Primary.args = {
     name: "likes-retroact",
     label: "I love Retroact UI",
     $primary: true,
-    checked: true,
+    defaultChecked: true,
 };
 
 

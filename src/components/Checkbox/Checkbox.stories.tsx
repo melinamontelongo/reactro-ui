@@ -20,7 +20,7 @@ Primary.args = {
     value: "yes",
     label: "I love Retroact UI",
     $primary: true,
-    checked: true,
+    defaultChecked: true,
   };
 
   
