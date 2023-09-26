@@ -59,10 +59,10 @@ background-color: ${(props) => props.theme.colors.baseLighter};
 }
 `
 
-const Checkbox = ({ id, value, label, $primary }: CheckboxProps) => {
+const Checkbox = ({ id, value, label, $primary, checked }: CheckboxProps) => {
     return (
         <Label $primary={$primary}>{label}
-            <Input type="checkbox" id={id} value={value} />
+            <Input type="checkbox" id={id} value={value} checked={checked}/>
             <Checkmark className="checkmark" $primary={$primary}/>
         </Label>
     )
