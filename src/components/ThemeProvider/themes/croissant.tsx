@@ -2,6 +2,8 @@ import base from "./base";
 
 const colors = {
     base: "#D2CC78",
+    baseLighter: "#faf5b1",
+    baseDarker: "#b3ad60",
     primary: {
         bg: "#F1A23E",
         color: "#A6270A",
