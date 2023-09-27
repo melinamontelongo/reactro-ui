@@ -3,6 +3,10 @@ export interface RadioProps {
     value: string,
     name: string,
     label: string,
-    $primary?: boolean,
+    primary?: boolean,
     defaultChecked?: boolean,
+}
+
+export interface StyledRadioProps extends Pick<RadioProps, "id" | "value" | "name" | "label" | "defaultChecked">{
+    $primary?: boolean;
 }

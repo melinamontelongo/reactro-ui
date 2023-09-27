@@ -19,7 +19,7 @@ Primary.args = {
     id: "primary-input-name",
     type: "text",
     label: "Name",
-    $primary: true,
+    primary: true,
     placeholder: "Your name...",
   };
 
@@ -49,9 +49,9 @@ export const Group: Story = {
     render: () => <>
         <fieldset>
             <legend>Your personal information: </legend>
-            <Input type="text" id="input-name" defaultValue="Who knows?" label="Name" $primary={true} placeholder="Your name..."/>
+            <Input type="text" id="input-name" defaultValue="Who knows?" label="Name" primary={true} placeholder="Your name..."/>
             <Input type="email" id="input-email" label="Email" placeholder="Your email..."/>
-            <Input type="password" id="input-password" label="Password" $primary={true} placeholder="Your password..."/>
+            <Input type="password" id="input-password" label="Password" primary={true} placeholder="Your password..."/>
         </fieldset>
     </>
 }

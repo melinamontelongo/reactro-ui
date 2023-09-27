@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ButtonProps } from "./Button.d";
+import { ButtonProps, StyledButtonProps } from "./Button.d";
 
 const getVariantStyles = (props) => {
     let styles;
@@ -55,7 +55,7 @@ const getVariantSize = (props) => {
     }
     return sizes;
 }
-const StyledButton = styled.button<ButtonProps>`
+const StyledButton = styled.button<StyledButtonProps>`
   line-height: 1;
   font-size: 15px;
   cursor: pointer;
@@ -68,12 +68,12 @@ const StyledButton = styled.button<ButtonProps>`
   }
 `;
 
-const Button = ({ size = "md", $primary, disabled, text, onClick, ...props }: ButtonProps) => {
+const Button = ({ size = "md", primary, disabled, text, onClick, ...props }: ButtonProps) => {
     return (
         <StyledButton
             type="button"
             onClick={onClick}
-            $primary={$primary}
+            $primary={primary}
             disabled={disabled}
             size={size}
             {...props}>

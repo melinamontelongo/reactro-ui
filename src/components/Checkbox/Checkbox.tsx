@@ -1,8 +1,8 @@
 import React from "react";
-import { CheckboxProps } from "./Checkbox.d";
+import { CheckboxProps, StyledCheckboxProps } from "./Checkbox.d";
 import styled from "styled-components";
 
-const Label = styled.label<Pick<CheckboxProps, "$primary">>`
+const Label = styled.label<Pick<StyledCheckboxProps, "$primary">>`
 display: block;
 position: relative;
 padding-top: 3px;
@@ -44,7 +44,7 @@ height: 0;
 width: 0;
 `
 
-const Checkmark = styled.span<Pick<CheckboxProps, "$primary">>`
+const Checkmark = styled.span<Pick<StyledCheckboxProps, "$primary">>`
 position: absolute;
 top: 0;
 left: 0;
@@ -59,11 +59,11 @@ background-color: ${(props) => props.theme.colors.baseLighter};
 }
 `
 
-const Checkbox = ({ id, value, label, $primary, defaultChecked }: CheckboxProps) => {
+const Checkbox = ({ id, value, label, primary, defaultChecked }: CheckboxProps) => {
     return (
-        <Label $primary={$primary}>{label}
+        <Label $primary={primary}>{label}
             <Input type="checkbox" id={id} value={value} defaultChecked={defaultChecked}/>
-            <Checkmark className="checkmark" $primary={$primary}/>
+            <Checkmark className="checkmark" $primary={primary}/>
         </Label>
     )
 };

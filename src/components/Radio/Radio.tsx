@@ -1,8 +1,8 @@
 import React from "react";
-import { RadioProps } from "./Radio.d";
+import { RadioProps, StyledRadioProps } from "./Radio.d";
 import styled from "styled-components";
 
-const Label = styled.label<Pick<RadioProps, "$primary">>`
+const Label = styled.label<Pick<StyledRadioProps, "$primary">>`
 display: block;
 position: relative;
 padding-top: 3px;
@@ -41,7 +41,7 @@ height: 0;
 width: 0;
 `
 
-const Checkmark = styled.span<Pick<RadioProps, "$primary">>`
+const Checkmark = styled.span<Pick<StyledRadioProps, "$primary">>`
 position: absolute;
 top: 0;
 left: 0;
@@ -56,11 +56,11 @@ background-color: ${(props) => props.theme.colors.baseLighter};
     display: none;
 }
 `
-const Radio = ({ id, name, value, label, $primary, defaultChecked }: RadioProps) => {
+const Radio = ({ id, name, value, label, primary, defaultChecked }: RadioProps) => {
     return (
-        <Label $primary={$primary}>{label}
+        <Label $primary={primary}>{label}
             <Input type="radio" id={id} name={name} value={value} defaultChecked={defaultChecked} />
-            <Checkmark className="checkmark" $primary={$primary} />
+            <Checkmark className="checkmark" $primary={primary} />
         </Label>
     )
 }

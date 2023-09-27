@@ -17,7 +17,7 @@ export const Primary: Story = (args) => (
 Primary.args = {
   width:"10rem",
   height: "15rem",
-  $primary: true,
+  primary: true,
   children: <></>
 };
 

@@ -15,7 +15,7 @@ export const Primary: Story = (args) => (
   <Button {...args} />
 );
 Primary.args = {
-  $primary: true,
+  primary: true,
   disabled: false,
   text: "Primary",
 };
@@ -24,7 +24,7 @@ export const Secondary: Story = (args) => (
   <Button {...args} />
 );
 Secondary.args = {
-  $primary: false,
+  primary: false,
   disabled: false,
   text: "Secondary",
 };
@@ -33,7 +33,7 @@ export const Disabled: Story = (args) => (
   <Button {...args} />
 );
 Disabled.args = {
-  $primary: false,
+  primary: false,
   disabled: true,
   text: "Disabled",
 };
@@ -42,7 +42,7 @@ export const Small: Story = (args) => (
   <Button {...args} />
 );
 Small.args = {
-  $primary: true,
+  primary: true,
   disabled: false,
   size: "sm",
   text: "Small",
@@ -52,7 +52,7 @@ export const Medium: Story = (args) => (
   <Button {...args} />
 );
 Medium.args = {
-  $primary: true,
+  primary: true,
   disabled: false,
   size: "md",
   text: "Medium",
@@ -62,7 +62,7 @@ export const Large: Story = (args) => (
   <Button {...args} />
 );
 Large.args = {
-  $primary: true,
+  primary: true,
   disabled: false,
   size: "lg",
   text: "Large",
