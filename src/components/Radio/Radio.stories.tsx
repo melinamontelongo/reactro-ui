@@ -1,6 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import Radio from "./Radio";
+import Fieldset from "../Fieldset/Fieldset";
 
 const meta: Meta<typeof Radio> = {
     component: Radio,
@@ -38,10 +39,9 @@ Secondary.args = {
 
 export const Group: Story = {
     render: () => <>
-        <fieldset>
-            <legend>Do you like Spaghetti?</legend>
+        <Fieldset legend="Do you like Spaghetti?">
             <Radio id="spaghetti-radio-yes" value="yes" name="like-spaghetti" label="Yes" primary={true}/>
             <Radio id="spaghetti-radio-no" value="no" name="like-spaghetti" label="No" />
-        </fieldset>
+        </Fieldset>
     </>
 }
