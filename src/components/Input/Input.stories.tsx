@@ -1,6 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import Input from "./Input";
+import Fieldset from "../Fieldset/Fieldset";
 
 const meta: Meta<typeof Input> = {
     component: Input,
@@ -47,11 +48,11 @@ NoLabel.args = {
 
 export const Group: Story = {
     render: () => <>
-        <fieldset>
+        <Fieldset primary>
             <legend>Your personal information: </legend>
             <Input type="text" id="input-name" defaultValue="Who knows?" label="Name" primary={true} placeholder="Your name..."/>
             <Input type="email" id="input-email" label="Email" placeholder="Your email..."/>
             <Input type="password" id="input-password" label="Password" primary={true} placeholder="Your password..."/>
-        </fieldset>
+        </Fieldset>
     </>
 }

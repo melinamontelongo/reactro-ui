@@ -10,7 +10,6 @@ gap: 10px;
 margin-bottom: 10px;
 `
 const StyledInput = styled.input<StyledInputProps>`
-width: 100%;
 padding: 5px 10px;
 background-color: ${(props) => props.theme.colors.baseLighter};
 border: ${(props) => props.theme.borderInset} ${(props) => props.$primary ? props.theme.colors.primary.shadow : props.theme.colors.secondary.shadow};
