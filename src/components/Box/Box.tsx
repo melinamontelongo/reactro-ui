@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import { BoxProps, StyledBoxProps } from "./Box.d";
+import { getBaseProperty, getVariantColor } from "../../utils/variants";
 
 const StyledBox = styled.div<StyledBoxProps>`
 width: ${(props) => props.$width};
 height: ${(props) => props.$height};
-background-color:  ${(props) => props.$primary ? props.theme.colors.primary.bg : props.theme.colors.secondary.bg};
-border: ${(props) => props.theme.borderOutset} ${(props) => props.$primary ? props.theme.colors.primary.shadow : props.theme.colors.secondary.shadow};
+background-color:  ${(props) => getVariantColor(props.$variant!, props.theme, "bg")};
+border: ${(props) => getBaseProperty(props.theme, "borderOutset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
 `
-const Box = ({ children, width, height, primary }: BoxProps) => {
+const Box = ({ children, width, height, variant = "base" }: BoxProps) => {
     return (
-        <StyledBox $width={width} $height={height} $primary={primary}>
+        <StyledBox $width={width} $height={height} $variant={variant}>
             {children}
         </StyledBox>
     )

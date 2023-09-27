@@ -1,9 +1,11 @@
+import { ComponentVariants } from "../../types/theme";
+
 export interface FieldsetProps {
     children: React.ReactNode,
-    primary?: boolean,
+    variant?: ComponentVariants,
     legend?: string,
 }
 
 export interface StyledFieldsetProps extends Pick<FieldsetProps, "children" | "legend">{
-    $primary?: boolean,
+    $variant?: ComponentVariants,
 }

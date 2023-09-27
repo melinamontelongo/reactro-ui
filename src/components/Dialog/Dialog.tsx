@@ -36,7 +36,7 @@ const Dialog = ({ width, height, title, content, footer, onClose }: DialogProps)
                 <Title>
                     {title}
                 </Title>
-                <Button size="sm" text="X" $primary onClick={onClose} />
+                <Button size="sm" text="X" variant="primary" onClick={onClose} />
             </TitleBar>
             <ContentContainer height={height}>
                 <div>

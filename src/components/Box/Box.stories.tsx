@@ -15,9 +15,9 @@ export const Primary: Story = (args) => (
   <Box {...args} />
 );
 Primary.args = {
-  width:"10rem",
+  width: "10rem",
   height: "15rem",
-  primary: true,
+  variant: "primary",
   children: <></>
 };
 
@@ -25,7 +25,8 @@ export const Secondary: Story = (args) => (
   <Box {...args} />
 );
 Secondary.args = {
-  width:"10rem",
+  width: "10rem",
   height: "15rem",
+  variant: "secondary",
   children: <></>
 };

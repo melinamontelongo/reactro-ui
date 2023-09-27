@@ -21,7 +21,7 @@ Primary.args = {
     value: "yes",
     name: "likes-retroact",
     label: "I love Retroact UI",
-    primary: true,
+    variant: "primary",
     defaultChecked: true,
 };
 
@@ -33,6 +33,7 @@ export const Secondary: Story = (args) => (
 Secondary.args = {
     id: "my-radio-no",
     value: "no",
+    variant:"secondary",
     name: "likes-retroact",
     label: "I don't love Retroact UI",
 };
@@ -40,7 +41,7 @@ Secondary.args = {
 export const Group: Story = {
     render: () => <>
         <Fieldset legend="Do you like Spaghetti?">
-            <Radio id="spaghetti-radio-yes" value="yes" name="like-spaghetti" label="Yes" primary={true}/>
+            <Radio id="spaghetti-radio-yes" value="yes" name="like-spaghetti" label="Yes" variant="primary"/>
             <Radio id="spaghetti-radio-no" value="no" name="like-spaghetti" label="No" />
         </Fieldset>
     </>

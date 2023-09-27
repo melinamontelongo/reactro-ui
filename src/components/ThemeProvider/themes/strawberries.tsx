@@ -1,9 +1,20 @@
+import { DefaultTheme } from "styled-components/dist/types";
+import { ComponentVariantProps, ComponentVariants } from "../../../types/theme";
 import base from "./base";
 
-const colors = {
-    base: "#f5f3ab",
-    baseLighter: "#fffed1", 
-    baseDarker: "#d9d791",
+const colors: Record<ComponentVariants, ComponentVariantProps> = {
+    base: {
+        bg: "#f5f3ab",
+        color: "",
+
+        hoverBg: "#fffed1",
+        hoverColor: "",
+
+        activeBg: "",
+        activeColor: "",
+
+        shadow: "#d9d791",
+    },
     primary: {
         bg: "#FFC4B5",
         color: "#ff474d",
@@ -30,7 +41,7 @@ const colors = {
     }
 };
 
-const strawberries = {
+const strawberries:DefaultTheme = {
     ...base,
     colors,
 }

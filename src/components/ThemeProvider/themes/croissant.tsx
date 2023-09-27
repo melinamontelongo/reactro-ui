@@ -1,9 +1,20 @@
+import { DefaultTheme } from "styled-components/dist/types";
+import { ComponentVariantProps, ComponentVariants } from "../../../types/theme";
 import base from "./base";
 
-const colors = {
-    base: "#D2CC78",
-    baseLighter: "#faf5b1",
-    baseDarker: "#b3ad60",
+const colors: Record<ComponentVariants, ComponentVariantProps> = {
+    base: {
+        bg: "#D2CC78",
+        color: "",
+
+        hoverBg: "#f7aa48",
+        hoverColor: "",
+
+        activeBg: "",
+        activeColor: "",
+
+        shadow: "#b3ad60",
+    },
     primary: {
         bg: "#F1A23E",
         color: "#A6270A",
@@ -30,7 +41,7 @@ const colors = {
     },
 };
 
-const croissant = {
+const croissant:DefaultTheme = {
     ...base,
     colors,
 }

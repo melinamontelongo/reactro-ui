@@ -1,40 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { ButtonProps, StyledButtonProps } from "./Button.d";
+import { getBaseProperty, getVariantColor } from "../../utils/variants";
 
-const getVariantStyles = (props) => {
-    let styles;
-    props.$primary ?
-        styles = `
-        color: ${props.theme.colors.primary.color};
-        background-color:  ${props.theme.colors.primary.bg};
-        border: 4px outset ${props.theme.colors.primary.shadow};
-        &:hover {
-            background-color:  ${props.theme.colors.primary.hoverBg};
-            color:  ${props.theme.colors.primary.hoverColor};
-        }
-        &:active {
-            background-color:  ${props.theme.colors.primary.activeBg};
-            color:  ${props.theme.colors.primary.activeColor};
-            border: 4px inset ${props.theme.colors.primary.shadow};
-        }`
-        :
-        styles = `
-        color: ${props.theme.colors.secondary.color};
-        background-color:  ${props.theme.colors.secondary.bg};
-        border: 4px outset ${props.theme.colors.secondary.shadow};
-        &:hover {
-            background-color:  ${props.theme.colors.secondary.hoverBg};
-            color:  ${props.theme.colors.secondary.hoverColor};
-        }
-        &:active {
-            background-color:  ${props.theme.colors.secondary.activeBg};
-            color:  ${props.theme.colors.secondary.activeColor};
-            border: 4px inset ${props.theme.colors.secondary.shadow};
-        }`
-    return styles;
-}
-const getVariantSize = (props) => {
+const getVariantSize = (props: Pick<StyledButtonProps, "size">) => {
     let sizes;
     switch (props.size) {
         case "sm":
@@ -64,16 +33,26 @@ const StyledButton = styled.button<StyledButtonProps>`
   display: inline-block;
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
   ${(props) => getVariantSize(props)}
-    ${(props) => getVariantStyles(props)}
+  color: ${(props) => getVariantColor(props.$variant!, props.theme, "color")};
+  background-color:  ${(props) => getVariantColor(props.$variant!, props.theme, "bg")};
+  border: ${(props) => getBaseProperty(props.theme, "borderOutset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
+  &:hover {
+      background-color: ${(props) => getVariantColor(props.$variant!, props.theme, "hoverBg")};
+      color: ${(props) => getVariantColor(props.$variant!, props.theme, "hoverColor")};
   }
-`;
+  &:active {
+      background-color:  ${(props) => getVariantColor(props.$variant!, props.theme, "activeBg")};
+      color:  ${(props) => getVariantColor(props.$variant!, props.theme, "activeColor")};
+      border: ${(props) => getBaseProperty(props.theme, "borderInset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
+  }`
+    ;
 
-const Button = ({ size = "md", primary, disabled, text, onClick, ...props }: ButtonProps) => {
+const Button = ({ size = "md", variant = "base", disabled, text, onClick, ...props }: ButtonProps) => {
     return (
         <StyledButton
             type="button"
             onClick={onClick}
-            $primary={primary}
+            $variant={variant}
             disabled={disabled}
             size={size}
             {...props}>

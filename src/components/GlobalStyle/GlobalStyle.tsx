@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
   font-family: "retro-gaming", Helvetica, Sans-Serif;
 }
 body {
-    background-color: ${(props) => props.theme.colors.base};
+    background-color: ${(props) => props.theme.colors.base.bg};
   }
 `
 
