@@ -14,7 +14,7 @@ type Story = StoryObj<typeof Checkbox>;
 
 export const AllCheckboxes: Story = {
     render: () => <>
-        <Fieldset legend="Checkbox variants:">
+        <Fieldset legend="Checkbox variants">
             <Checkbox id="checkbox-default" value="yes" label="Default" />
             <Checkbox id="checkbox-primary" value="no" label="Primary" variant="primary" />
             <Checkbox id="checkbox-secondary" value="no" label="Secondary" variant="secondary" />

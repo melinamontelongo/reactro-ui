@@ -3,6 +3,7 @@ import { ComponentVariants } from "../../types/theme";
 
 export interface ButtonProps {
   text?: string;
+  type?: "button" | "submit" | "reset";
   variant?: ComponentVariants;
   disabled?: boolean;
   size?: "sm" | "md" | "lg";

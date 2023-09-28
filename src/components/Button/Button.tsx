@@ -27,7 +27,7 @@ const getVariantSize = (props: Pick<StyledButtonProps, "size">) => {
 const StyledButton = styled.button<StyledButtonProps>`
   line-height: 1;
   font-size: 15px;
-  cursor: pointer;
+  cursor: ${(props) => props.disabled ? "not-allowed" : "pointer"};
   font-weight: 700;
   font-weight: bold;
   display: inline-block;
@@ -37,13 +37,13 @@ const StyledButton = styled.button<StyledButtonProps>`
   background-color:  ${(props) => getVariantColor(props.$variant!, props.theme, "bg")};
   border: ${(props) => getBaseProperty(props.theme, "borderOutset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
   &:hover {
-      background-color: ${(props) => getVariantColor(props.$variant!, props.theme, "hoverBg")};
-      color: ${(props) => getVariantColor(props.$variant!, props.theme, "hoverColor")};
+      background-color: ${(props) => !props.disabled && getVariantColor(props.$variant!, props.theme, "hoverBg")};
+      color: ${(props) => !props.disabled && getVariantColor(props.$variant!, props.theme, "hoverColor")};
   }
   &:active {
-      background-color:  ${(props) => getVariantColor(props.$variant!, props.theme, "activeBg")};
-      color:  ${(props) => getVariantColor(props.$variant!, props.theme, "activeColor")};
-      border: ${(props) => getBaseProperty(props.theme, "borderInset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
+      background-color:  ${(props) => !props.disabled && getVariantColor(props.$variant!, props.theme, "activeBg")};
+      color:  ${(props) => !props.disabled && getVariantColor(props.$variant!, props.theme, "activeColor")};
+      border: ${(props) => !props.disabled && getBaseProperty(props.theme, "borderInset")} ${(props) => !props.disabled && getVariantColor(props.$variant!, props.theme, "shadow")};
   }`
     ;
 

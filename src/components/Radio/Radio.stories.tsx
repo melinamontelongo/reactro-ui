@@ -12,37 +12,13 @@ export default meta;
 
 type Story = StoryObj<typeof Radio>;
 
-export const Primary: Story = (args) => (
-    <Radio {...args} />
-)
-
-Primary.args = {
-    id: "my-radio-yes",
-    value: "yes",
-    name: "likes-retroact",
-    label: "I love Retroact UI",
-    variant: "primary",
-    defaultChecked: true,
-};
-
-
-export const Secondary: Story = (args) => (
-    <Radio {...args} />
-)
-
-Secondary.args = {
-    id: "my-radio-no",
-    value: "no",
-    variant:"secondary",
-    name: "likes-retroact",
-    label: "I don't love Retroact UI",
-};
-
-export const Group: Story = {
+export const AllRadios: Story = {
     render: () => <>
-        <Fieldset legend="Do you like Spaghetti?">
-            <Radio id="spaghetti-radio-yes" value="yes" name="like-spaghetti" label="Yes" variant="primary"/>
-            <Radio id="spaghetti-radio-no" value="no" name="like-spaghetti" label="No" />
+        <Fieldset legend="Radio variants">
+            <Radio id="default-radio" value="default" name="default" label="Default"/>
+            <Radio id="primary-radio" value="primary" name="primary" label="Primary"  variant="primary"/>
+            <Radio id="secondary-radio" value="secondary" name="secondary" label="Secondary"  variant="secondary"/>
+            <Radio id="base-radio" value="base" name="base" label="Base"  variant="base"/>
         </Fieldset>
     </>
 }

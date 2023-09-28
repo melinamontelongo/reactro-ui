@@ -26,6 +26,7 @@ const preview: Preview = {
       themes: {
         strawberries: themes.strawberries,
         croissant: themes.croissant,
+        pigeon: themes.pigeon,
       },
       defaultTheme: 'strawberries',
       Provider: ThemeProvider,

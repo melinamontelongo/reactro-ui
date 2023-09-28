@@ -35,7 +35,7 @@ NoLabel.args = {
 
 export const Group: Story = {
     render: () => <>
-        <Fieldset legend="Input variants:">
+        <Fieldset legend="Input variants">
         <Input type="text" id="input-default" label="Default" placeholder="I'm a default input..."/>
             <Input type="text" id="input-primary" defaultValue="I'm a primary input with a default value!" label="Primary" variant="primary" placeholder="I'm a primary input..."/>
             <Input type="email" id="input-secondary" label="Secondary" variant="secondary" placeholder="I'm a secondary input..."/>
