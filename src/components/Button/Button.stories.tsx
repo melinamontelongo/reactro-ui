@@ -11,56 +11,21 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = (args) => (
-  <Button {...args} />
-);
-Primary.args = {
-  variant: "primary",
-  disabled: false,
-  text: "Primary",
-};
+export const allButtons: Story = {
+  render: () => <div style={{display: "flex", flexDirection: "column", gap: "10px"}}>
+  <div>
+  <h2>Variants</h2>
+    <Button text="Default" />
+    <Button text="Primary" variant="primary" />
+    <Button text="Secondary" variant="secondary" />
+    <Button text="Base" variant="base" />
+  </div>
+  <div>
+  <h2>Sizes</h2>
+    <Button text="Small" size="sm"/>
+    <Button text="Medium" size="md"/>
+    <Button text="Large" size="lg"/>
+  </div>
 
-export const Secondary: Story = (args) => (
-  <Button {...args} />
-);
-Secondary.args = {
-  variant: "secondary",
-  disabled: false,
-  text: "Secondary",
-};
-
-export const Disabled: Story = (args) => (
-  <Button {...args} />
-);
-Disabled.args = {
-  variant: "base",
-  disabled: true,
-  text: "Disabled",
-};
-
-export const Small: Story = (args) => (
-  <Button {...args} />
-);
-Small.args = {
-  disabled: false,
-  size: "sm",
-  text: "Small",
-};
-
-export const Medium: Story = (args) => (
-  <Button {...args} />
-);
-Medium.args = {
-  disabled: false,
-  size: "md",
-  text: "Medium",
-};
-
-export const Large: Story = (args) => (
-  <Button {...args} />
-);
-Large.args = {
-  disabled: false,
-  size: "lg",
-  text: "Large",
+  </div>
 };

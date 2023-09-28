@@ -12,30 +12,16 @@ export default meta;
 
 type Story = StoryObj<typeof Input>;
 
-export const Primary: Story = (args) => (
+export const Label: Story = (args) => (
     <Input {...args}/>
 )
 
-Primary.args = {
-    id: "primary-input-name",
+Label.args = {
+    id: "no-label-input-name",
     type: "text",
     label: "Name",
-    variant: "primary",
     placeholder: "Your name...",
   };
-
-  
-export const Secondary: Story = (args) => (
-    <Input {...args}/>
-)
-
-Secondary.args = {
-    id: "secondary-input-email",
-    type: "email",
-    variant: "secondary",
-    label: "Email",
-    placeholder: "Your email...",
-};
 
 export const NoLabel: Story = (args) => (
     <Input {...args}/>
@@ -49,11 +35,15 @@ NoLabel.args = {
 
 export const Group: Story = {
     render: () => <>
-        <Fieldset>
-            <legend>Your personal information: </legend>
-            <Input type="text" id="input-name" defaultValue="Who knows?" label="Name" variant={"primary"} placeholder="Your name..."/>
-            <Input type="email" id="input-email" label="Email" placeholder="Your email..."/>
-            <Input type="password" id="input-password" label="Password" variant={"secondary"} placeholder="Your password..."/>
+        <Fieldset legend="Input variants:">
+        <Input type="text" id="input-default" label="Default" placeholder="I'm a default input..."/>
+            <Input type="text" id="input-primary" defaultValue="I'm a primary input with a default value!" label="Primary" variant="primary" placeholder="I'm a primary input..."/>
+            <Input type="email" id="input-secondary" label="Secondary" variant="secondary" placeholder="I'm a secondary input..."/>
+            <Input type="password" id="input-base" label="Base" variant="base" placeholder="I'm a base input with password type..."/>
+            <Input type="number" id="input-number" label="Number" placeholder="I can also be type number..."/>
+            <Input type="email" id="input-email" label="Email" placeholder="Or email..."/>
+            <Input type="tel" id="input-tel" label="Telephone" placeholder="Or tel..."/>
+            <Input type="url" id="input-tel" label="Url" placeholder="Even url!"/>
         </Fieldset>
     </>
 }

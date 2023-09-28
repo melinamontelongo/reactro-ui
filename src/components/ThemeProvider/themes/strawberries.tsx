@@ -5,17 +5,17 @@ import base from "./base";
 const colors: Record<ComponentVariants, ComponentVariantProps> = {
     base: {
         bg: "#f5f3ab",
-        color: "",
+        color: "#1f1e15",
 
         hoverBg: "#fffed1",
-        hoverColor: "",
+        hoverColor: "#2b2b22",
 
-        activeBg: "",
-        activeColor: "",
+        activeBg: "#c2c082",
+        activeColor: "#1c1c12",
 
         shadow: "#d9d791",
     },
-    primary: {
+    default: {
         bg: "#FFC4B5",
         color: "#ff474d",
 
@@ -27,7 +27,7 @@ const colors: Record<ComponentVariants, ComponentVariantProps> = {
 
         shadow: "#ff8c7d",
     },
-    secondary: {
+    primary: {
         bg: "#87FFA9",
         color: "#3BB35D",
 
@@ -37,11 +37,23 @@ const colors: Record<ComponentVariants, ComponentVariantProps> = {
         activeBg: "#74ed96",
         activeColor: "#319e50",
 
-        shadow: "#5ac479",  
+        shadow: "#5ac479",
+    },
+    secondary: {
+        bg: "#ffeb87",
+        color: "#b39f3b",
+
+        hoverBg: "#ffee99",
+        hoverColor: "#c9b44b",
+
+        activeBg: "#e0cd6e",
+        activeColor: "#8c7b27",
+
+        shadow: "#c4aa5a",
     }
 };
 
-const strawberries:DefaultTheme = {
+const strawberries: DefaultTheme = {
     ...base,
     colors,
 }

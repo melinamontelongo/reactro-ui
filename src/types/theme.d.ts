@@ -1,4 +1,4 @@
-export type ComponentVariants = "primary" | "secondary" | "base";
+export type ComponentVariants = "primary" | "secondary" | "base" | "default";
 
 export type ComponentVariantProps = {
     bg: string;

@@ -47,7 +47,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   }`
     ;
 
-const Button = ({ size = "md", variant = "base", disabled, text, onClick, ...props }: ButtonProps) => {
+const Button = ({ size = "md", variant = "default", disabled, text, onClick, ...props }: ButtonProps) => {
     return (
         <StyledButton
             type="button"

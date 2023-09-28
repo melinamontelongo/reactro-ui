@@ -9,7 +9,7 @@ height: ${(props) => props.$height};
 background-color:  ${(props) => getVariantColor(props.$variant!, props.theme, "bg")};
 border: ${(props) => getBaseProperty(props.theme, "borderOutset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
 `
-const Box = ({ children, width, height, variant = "base" }: BoxProps) => {
+const Box = ({ children, width, height, variant = "default" }: BoxProps) => {
     return (
         <StyledBox $width={width} $height={height} $variant={variant}>
             {children}

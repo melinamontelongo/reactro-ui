@@ -5,17 +5,17 @@ import base from "./base";
 const colors: Record<ComponentVariants, ComponentVariantProps> = {
     base: {
         bg: "#D2CC78",
-        color: "",
+        color: "#1f1e11",
 
-        hoverBg: "#f7aa48",
-        hoverColor: "",
+        hoverBg: "#e3dd88",
+        hoverColor: "#47452a",
 
-        activeBg: "",
-        activeColor: "",
+        activeBg: "#bdb766",
+        activeColor: "#14140a",
 
         shadow: "#b3ad60",
     },
-    primary: {
+    default: {
         bg: "#F1A23E",
         color: "#A6270A",
 
@@ -27,17 +27,29 @@ const colors: Record<ComponentVariants, ComponentVariantProps> = {
 
         shadow: "#BF3803",
     },
+    primary: {
+        bg: "#c94f08",
+        color: "#4d1e03",
+
+        hoverBg: "#d6580f",
+        hoverColor: "#6b2a04",
+
+        activeBg: "#ad4407",
+        activeColor: "#2e1202",
+
+        shadow: "#803205",
+    },
     secondary: {
-        bg: "#F2DA91",
-        color: "#cc7125",
+        bg: "#5c2303",
+        color: "#c94f08",
 
-        hoverBg: "#fce6a2",
-        hoverColor: "#de7e2f",
+        hoverBg: "#6e2a03",
+        hoverColor: "#db5609",
 
-        activeBg: "#e3cb81",
-        activeColor: "#b5611b",
+        activeBg: "#451b03",
+        activeColor: "#b04507",
 
-        shadow: "#F18429",
+        shadow: "#e65602",
     },
 };
 

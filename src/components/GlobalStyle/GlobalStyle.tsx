@@ -22,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
 }
 body {
     background-color: ${(props) => props.theme.colors.base.bg};
+    color: ${(props) => props.theme.colors.base.color};
   }
 `
 

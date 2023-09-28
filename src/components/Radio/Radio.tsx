@@ -16,7 +16,7 @@ font-size: 15px;
 -ms-user-select: none;
 user-select: none;
 &:hover input ~ .checkmark{
-    background-color: ${(props) => getVariantColor(props.$variant!, props.theme, "bg")};
+    background-color: ${(props) => props.theme.colors.base.shadow};
 }
 & input:checked ~ .checkmark {
     background-color: ${(props) => getVariantColor(props.$variant!, props.theme, "bg")};
@@ -50,14 +50,14 @@ height: 18px;
 width: 18px;
 border: ${(props) => getBaseProperty(props.theme, "borderInset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
 border-radius: 50%;
-background-color: ${(props) => props.theme.colors.base.bg};
+background-color: ${(props) => props.theme.colors.base.hoverBg};
 &:after{
     content: "";
     position: absolute;
     display: none;
 }
 `
-const Radio = ({ id, name, value, label, variant = "base", defaultChecked }: RadioProps) => {
+const Radio = ({ id, name, value, label, variant = "default", defaultChecked }: RadioProps) => {
     return (
         <Label $variant={variant}>{label}
             <Input type="radio" id={id} name={name} value={value} defaultChecked={defaultChecked} />

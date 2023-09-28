@@ -16,7 +16,7 @@ font-size: 15px;
 -ms-user-select: none;
 user-select: none;
 &:hover input ~ .checkmark{
-    background-color: ${(props) => getVariantColor(props.$variant!, props.theme, "bg")};
+    background-color: ${(props) => props.theme.colors.base.shadow};
 }
 & input:checked ~ .checkmark {
     background-color:${(props) => getVariantColor(props.$variant!, props.theme, "bg")};
@@ -52,7 +52,7 @@ left: 0;
 height: 18px;
 width: 18px;
 border: ${(props) => getBaseProperty(props.theme, "borderInset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
-background-color: ${(props) => getVariantColor(props.$variant!, props.theme, "activeBg")};
+background-color: ${(props) => props.theme.colors.base.hoverBg};
 &:after{
     content: "";
     position: absolute;
@@ -60,7 +60,7 @@ background-color: ${(props) => getVariantColor(props.$variant!, props.theme, "ac
 }
 `
 
-const Checkbox = ({ id, value, label, variant = "base", defaultChecked }: CheckboxProps) => {
+const Checkbox = ({ id, value, label, variant = "default", defaultChecked }: CheckboxProps) => {
     return (
         <Label $variant={variant}>{label}
             <Input type="checkbox" id={id} value={value} defaultChecked={defaultChecked}/>

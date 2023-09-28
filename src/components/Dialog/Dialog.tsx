@@ -19,15 +19,15 @@ const TitleBar = styled.div`
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    background-color: ${(props) => props.theme.colors.primary.bg};
-    color: ${(props) => props.theme.colors.primary.color};
-    border-bottom: 4px solid ${(props) => props.theme.colors.primary.shadow};
+    background-color: ${(props) => props.theme.colors.default.bg};
+    color: ${(props) => props.theme.colors.default.color};
+    border-bottom: 4px solid ${(props) => props.theme.colors.default.shadow};
 `
 const StyledDialog = styled.div<Pick<DialogProps, "width">>`
     width: ${(props) => props.width};
     min-width: min-content;
-    background-color: ${(props) => props.theme.colors.secondary.bg};
-    border: ${(props) => props.theme.borderOutset} ${(props) => props.theme.colors.primary.shadow};
+    background-color: ${(props) => props.theme.colors.secondary.hoverBg};
+    border: ${(props) => props.theme.borderOutset} ${(props) => props.theme.colors.default.shadow};
     `
 const Dialog = ({ width, height, title, content, footer, onClose }: DialogProps) => {
     return (
@@ -36,7 +36,7 @@ const Dialog = ({ width, height, title, content, footer, onClose }: DialogProps)
                 <Title>
                     {title}
                 </Title>
-                <Button size="sm" text="X" variant="primary" onClick={onClose} />
+                <Button size="sm" text="X" onClick={onClose} />
             </TitleBar>
             <ContentContainer height={height}>
                 <div>

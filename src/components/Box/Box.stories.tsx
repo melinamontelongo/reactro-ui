@@ -11,22 +11,12 @@ export default meta;
 
 type Story = StoryObj<typeof Box>;
 
-export const Primary: Story = (args) => (
-  <Box {...args} />
-);
-Primary.args = {
-  width: "10rem",
-  height: "15rem",
-  variant: "primary",
-  children: <></>
-};
-
-export const Secondary: Story = (args) => (
-  <Box {...args} />
-);
-Secondary.args = {
-  width: "10rem",
-  height: "15rem",
-  variant: "secondary",
-  children: <></>
+export const Boxes: Story = {
+  render: () =>
+    <div style={{ display: "flex", gap: "10px" }}>
+      <Box width="10rem" height="15rem" children={<>I'm a default box.</>} />
+      <Box width="10rem" height="15rem" variant="primary" children={<>I'm a primary box</>} />
+      <Box width="10rem" height="15rem" variant="secondary" children={<>I'm a secondary box</>} />
+      <Box width="10rem" height="15rem" variant="base" children={<>I'm a base box</>} />
+    </div>
 };

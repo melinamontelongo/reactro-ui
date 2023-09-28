@@ -13,11 +13,17 @@ type Story = StoryObj<typeof Fieldset>;
 
 export const Default: Story = {
     render: () => <>
+        <Fieldset legend="Fieldset">
+        I'm a default fieldset!
+    </Fieldset>
     <Fieldset legend="Fieldset" variant="primary">
         I'm a primary fieldset!
     </Fieldset>
     <Fieldset legend="Fieldset" variant="secondary">
         I'm a secondary fieldset!
+    </Fieldset>
+    <Fieldset legend="Fieldset" variant="base">
+        I'm a base fieldset!
     </Fieldset>
     </>
 }

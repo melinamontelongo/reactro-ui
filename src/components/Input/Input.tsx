@@ -12,10 +12,10 @@ margin-bottom: 10px;
 `
 const StyledInput = styled.input<StyledInputProps>`
 padding: 5px 10px;
-background-color: ${(props) => getVariantColor(props.$variant!, props.theme, "activeBg")};
+background-color: ${(props) => props.theme.colors.base.hoverBg};
 border: ${(props) => getBaseProperty(props.theme, "borderInset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
 `
-const Input = ({ type, label, id, defaultValue, variant, placeholder }: InputProps) => {
+const Input = ({ type, label, id, defaultValue, variant="default", placeholder }: InputProps) => {
     return (<>
         {label ?
             <Label>{label}

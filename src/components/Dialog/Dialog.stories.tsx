@@ -23,7 +23,7 @@ Default.args = {
   width: "400px",
   height: "200px",
   footer: <div style={{ display: "flex", flexDirection: "row", justifyContent: "end", gap: "10px" }}>
-    <Button size={"lg"} text={"OK"} variant="primary" />
-    <Button size={"lg"} text={"Cancel"} variant="secondary" />
+    <Button size={"lg"} text={"OK"} />
+    <Button size={"lg"} text={"Cancel"} />
   </div>,
 };

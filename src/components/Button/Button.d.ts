@@ -5,7 +5,7 @@ export interface ButtonProps {
   text?: string;
   variant?: ComponentVariants;
   disabled?: boolean;
-  size: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg";
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 

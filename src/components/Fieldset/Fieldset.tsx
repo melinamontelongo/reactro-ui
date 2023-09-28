@@ -11,7 +11,7 @@ const Legend = styled.legend`
 font-weight: bold;
 font-size: 20px;
 `
-const Fieldset = ({children, legend, variant = "base"}:FieldsetProps) => {
+const Fieldset = ({children, legend, variant = "default"}:FieldsetProps) => {
     return(
         <StyledFieldset $variant={variant}>
             {legend && <Legend>{legend}</Legend>}
