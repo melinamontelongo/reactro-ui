@@ -14,6 +14,8 @@ const colors: Record<ComponentVariants, ComponentVariantProps> = {
         activeColor: "#14140a",
 
         shadow: "#b3ad60",
+
+        placeholderColor: "#8a8762",
     },
     default: {
         bg: "#F1A23E",

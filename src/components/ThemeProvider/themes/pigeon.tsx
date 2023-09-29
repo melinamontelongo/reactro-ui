@@ -14,6 +14,8 @@ const colors: Record<ComponentVariants, ComponentVariantProps> = {
         activeColor: "#91919c",
 
         shadow: "#3b3659",
+
+        placeholderColor: "#6b6b73",
     },
     default: {
         bg: "#1A1A26",
@@ -26,6 +28,8 @@ const colors: Record<ComponentVariants, ComponentVariantProps> = {
         activeColor: "#515163",
 
         shadow: "#363659",
+
+        placeholderColor: "",
     },
     primary: {
         bg: "#593C57",
@@ -38,6 +42,8 @@ const colors: Record<ComponentVariants, ComponentVariantProps> = {
         activeColor: "#756674",
 
         shadow: "#73406f",
+
+        placeholderColor: "",
     },
     secondary: {
         bg: "#307567",
@@ -50,6 +56,8 @@ const colors: Record<ComponentVariants, ComponentVariantProps> = {
         activeColor: "#619188",
 
         shadow: "#298774",
+
+        placeholderColor: "",
     }
 };
 

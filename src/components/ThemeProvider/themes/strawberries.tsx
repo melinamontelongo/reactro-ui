@@ -5,15 +5,17 @@ import base from "./base";
 const colors: Record<ComponentVariants, ComponentVariantProps> = {
     base: {
         bg: "#f5f3ab",
-        color: "#1f1e15",
+        color: "#45453b",
 
         hoverBg: "#fffed1",
-        hoverColor: "#2b2b22",
+        hoverColor: "#636356",
 
         activeBg: "#c2c082",
-        activeColor: "#1c1c12",
+        activeColor: "#2b2b25",
 
         shadow: "#d9d791",
+
+        placeholderColor: "#969683",
     },
     default: {
         bg: "#FFC4B5",

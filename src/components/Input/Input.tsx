@@ -13,13 +13,13 @@ margin-bottom: 10px;
 const StyledInput = styled.input<StyledInputProps>`
 padding: 5px 10px;
 background-color: ${(props) => props.theme.colors.base.hoverBg};
-color: ${(props) => props.theme.colors.base.hoverColor};
+color: ${(props) => props.theme.colors.base.color};
 &::placeholder{
-    color: ${(props) => props.theme.colors.base.activeColor};
+    color:  ${(props) => props.theme.colors.base.placeholderColor};
 }
 border: ${(props) => getBaseProperty(props.theme, "borderInset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
 `
-const Input = ({ type, label, id, defaultValue, variant="default", placeholder }: InputProps) => {
+const Input = ({ type, label, id, defaultValue, variant = "default", placeholder }: InputProps) => {
     return (<>
         {label ?
             <Label>{label}

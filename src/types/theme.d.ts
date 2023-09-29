@@ -8,4 +8,5 @@ export type ComponentVariantProps = {
     activeBg: string;
     activeColor: string;
     shadow: string;
+    placeholderColor?: string;
 };
