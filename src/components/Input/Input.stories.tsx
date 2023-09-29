@@ -21,6 +21,7 @@ Label.args = {
     type: "text",
     label: "Name",
     placeholder: "Your name...",
+    onChange: (e) => console.log(e.target.value),
   };
 
 export const NoLabel: Story = (args) => (
@@ -31,6 +32,7 @@ NoLabel.args = {
     id: "no-label-input-email",
     type: "email",
     placeholder: "Your email...",
+    onChange: (e) => console.log(e.target.value),
 };
 
 export const Group: Story = {

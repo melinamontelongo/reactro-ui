@@ -60,10 +60,10 @@ background-color: ${(props) => props.theme.colors.base.hoverBg};
 }
 `
 
-const Checkbox = ({ id, value, label, variant = "default", defaultChecked }: CheckboxProps) => {
+const Checkbox = ({ id, value, name, label, variant = "default", defaultChecked }: CheckboxProps) => {
     return (
         <Label $variant={variant}>{label}
-            <Input type="checkbox" id={id} value={value} defaultChecked={defaultChecked}/>
+            <Input type="checkbox" id={id} value={value} name={name} defaultChecked={defaultChecked}/>
             <Checkmark className="checkmark" $variant={variant}/>
         </Label>
     )
