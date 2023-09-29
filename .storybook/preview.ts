@@ -5,7 +5,6 @@ import { withThemeFromJSXProvider } from '@storybook/addon-styling';
 import themes from '../src/components/ThemeProvider/themes';
 import GlobalStyle from '../src/components/GlobalStyle/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
-/* import ThemeProvider from "../src/components/ThemeProvider/ThemeProvider"; */
 
 const GlobalStyles = GlobalStyle;
 
@@ -27,6 +26,7 @@ const preview: Preview = {
         strawberries: themes.strawberries,
         croissant: themes.croissant,
         pigeon: themes.pigeon,
+        lavender: themes.lavender,
       },
       defaultTheme: 'strawberries',
       Provider: ThemeProvider,
