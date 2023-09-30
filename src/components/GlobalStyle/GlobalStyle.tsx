@@ -24,6 +24,16 @@ body {
     background-color: ${(props) => props.theme.colors.base.bg};
     color: ${(props) => props.theme.colors.base.color};
   }
+
+::-moz-selection{
+  color: ${(props) => props.theme.colors.base.bg};
+  background: ${(props) => props.theme.colors.base.color};
+}
+
+::selection {
+  color: ${(props) => props.theme.colors.base.bg};
+  background: ${(props) => props.theme.colors.base.color};
+}
 `
 
 export default GlobalStyle;
