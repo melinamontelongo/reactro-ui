@@ -10,3 +10,7 @@ export type ComponentVariantProps = {
     shadow: string;
     placeholderColor?: string;
 };
+
+export type TextTags = "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+
+export type FontFamily = "alkhemikal" | "retro" | "venice" | "bitcell" | "owre" | "edunline";
