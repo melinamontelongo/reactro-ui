@@ -1,15 +1,12 @@
-import { MouseEventHandler } from "react";
+import { ButtonHTMLAttributes } from "react";
 import { ComponentVariants } from "../../types/theme";
 
-export interface ButtonProps {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string;
-  type?: "button" | "submit" | "reset";
   variant?: ComponentVariants;
-  disabled?: boolean;
   size?: "sm" | "md" | "lg";
-  onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-export interface StyledButtonProps extends Omit<ButtonProps, "variant">{
+export interface StyledButtonProps extends Omit<ButtonProps, "variant"> {
   $variant?: ComponentVariants,
 }

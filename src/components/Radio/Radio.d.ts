@@ -1,12 +1,9 @@
+import { InputHTMLAttributes } from "react";
 import { ComponentVariants } from "../../types/theme";
 
-export interface RadioProps {
-    id?: string,
-    value?: string,
-    name?: string,
+export interface RadioProps extends InputHTMLAttributes<HTMLInputElement> {
     label: string,
     variant?: ComponentVariants,
-    defaultChecked?: boolean,
 }
 
 export interface StyledRadioProps extends Omit<RadioProps, "variant"> {

@@ -21,14 +21,14 @@ cursor: ${(props) => props.disabled ? "not-allowed" : "auto"};
 }
 border: ${(props) => getBaseProperty(props.theme, "borderInset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
 `
-const Input = ({ type, name, label, id, defaultValue, variant = "default", placeholder, onChange, value, readonly = false, disabled = false }: InputProps) => {
+const Input = ({ type, variant = "default", label, ...props }: InputProps) => {
     return (<>
         {label ?
             <Label>{label}
-                <StyledInput type={type} id={id} name={name} defaultValue={defaultValue} placeholder={placeholder} $variant={variant} value={value} onChange={onChange ? onChange : undefined} readOnly={readonly} disabled={disabled}/>
+                <StyledInput type={type} $variant={variant} {...props} />
             </Label>
             :
-            <StyledInput type={type} id={id} name={name} defaultValue={defaultValue} placeholder={placeholder} $variant={variant} value={value} onChange={onChange ? onChange : undefined} readOnly={readonly} disabled={disabled}/>
+            <StyledInput type={type} $variant={variant} {...props} />
         }
     </>)
 }

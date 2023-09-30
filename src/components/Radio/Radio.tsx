@@ -57,10 +57,10 @@ background-color: ${(props) => props.theme.colors.base.hoverBg};
     display: none;
 }
 `
-const Radio = ({ id, name, value, label, variant = "default", defaultChecked }: RadioProps) => {
+const Radio = ({ label, variant = "default", ...props }: RadioProps) => {
     return (
         <Label $variant={variant}>{label}
-            <Input type="radio" id={id} name={name} value={value} defaultChecked={defaultChecked} />
+            <Input type="radio" {...props} />
             <Checkmark className="checkmark" $variant={variant} />
         </Label>
     )

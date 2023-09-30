@@ -1,22 +1,13 @@
-import { ChangeEventHandler } from "react";
+import { TextareaHTMLAttributes } from "react";
 import { ComponentVariants } from "../../types/theme";
 
-export interface TextareaProps {
-    id?: string,
-    name?: string,
+export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
     label?: string,
     variant?: ComponentVariants,
-    defaultValue?: string,
-    value?: string,
-    placeholder?: string,
-    onChange?: ChangeEventHandler<HTMLInputElement>,
     resize?: "both" | "horizontal" | "vertical" | "none",
-    cols?: string,
-    rows?: string,
-    readonly?: boolean,
 }
 
-export interface StyledTextareaProps extends Omit<TextareaProps, "variant" | "resize">{
+export interface StyledTextareaProps extends Omit<TextareaProps, "variant" | "resize"> {
     $variant?: ComponentVariants,
     $resize?: "both" | "horizontal" | "vertical" | "none",
 }

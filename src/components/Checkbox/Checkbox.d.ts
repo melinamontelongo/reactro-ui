@@ -1,14 +1,11 @@
+import { InputHTMLAttributes } from "react";
 import { ComponentVariants } from "../../types/theme";
 
-export interface CheckboxProps{
-    id?: string,
-    value?: string,
-    name?: string,
+export interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement>{
     label: string,
     variant?: ComponentVariants,
-    defaultChecked?: boolean,
 }
 
-export interface StyledCheckboxProps extends Pick<CheckboxProps, "id" | "value" | "defaultChecked" | "label">{
+export interface StyledCheckboxProps extends Omit<CheckboxProps, "variant"> {
     $variant?: ComponentVariants,
 }

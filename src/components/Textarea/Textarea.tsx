@@ -20,14 +20,14 @@ resize: ${(props) => props.$resize};
 }
 border: ${(props) => getBaseProperty(props.theme, "borderInset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
 `
-const Textarea = ({ label, id, name, defaultValue, variant = "default", placeholder, onChange, value, resize = "both", cols="20", rows="2", readonly = false }: TextareaProps) => {
+const Textarea = ({ label, variant = "default", resize = "both", ...props }: TextareaProps) => {
     return (<>
         {label ?
             <Label>{label}
-                <StyledTextarea id={id} name={name} defaultValue={defaultValue} placeholder={placeholder} $variant={variant} value={value} onChange={onChange ? onChange : undefined} $resize={resize} cols={cols} rows={rows} readOnly={readonly}/>
+                <StyledTextarea $variant={variant} $resize={resize} {...props} />
             </Label>
             :
-            <StyledTextarea id={id} name={name} defaultValue={defaultValue} placeholder={placeholder} $variant={variant} value={value} onChange={onChange ? onChange : undefined} $resize={resize} cols={cols} rows={rows} readOnly={readonly}/>
+            <StyledTextarea $variant={variant} $resize={resize} {...props} />
         }
     </>)
 }

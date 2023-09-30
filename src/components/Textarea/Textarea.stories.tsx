@@ -21,7 +21,7 @@ Label.args = {
     label: "Textarea with a label...",
     placeholder: "I'm a textarea that can't be resized but have a rows value of 10 and an onChange function...",
     resize: "none",
-    rows: "10",
+    rows: 10,
     onChange: (e) => console.log(e.target.value),
   };
 
@@ -32,7 +32,7 @@ export const NoLabel: Story = (args) => (
 NoLabel.args = {
     id: "no-label-input-email",
     placeholder: "I have no label but, as you can see, I can be resized... There's so many possibilities!",
-    cols: "30",
-    rows: "10",
+    cols: 30,
+    rows: 10,
     onChange: (e) => console.log(e.target.value)
 };

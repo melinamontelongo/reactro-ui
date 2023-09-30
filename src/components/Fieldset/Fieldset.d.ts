@@ -6,6 +6,6 @@ export interface FieldsetProps {
     legend?: string,
 }
 
-export interface StyledFieldsetProps extends Pick<FieldsetProps, "children" | "legend">{
+export interface StyledFieldsetProps extends Omit<FieldsetProps, "variant"> {
     $variant?: ComponentVariants,
 }
