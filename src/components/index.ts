@@ -7,5 +7,6 @@ export * from "./Fieldset";
 export * from "./GlobalStyle";
 export * from "./Input";
 export * from "./Radio";
+export * from "./Select";
 export * from "./Textarea";
 export * from "./ThemeProvider";
