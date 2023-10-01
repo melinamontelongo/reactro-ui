@@ -6,6 +6,7 @@ import Fieldset from "../Fieldset/Fieldset";
 const meta: Meta<typeof Input> = {
     component: Input,
     title: "Input",
+    tags: ["autodocs"],
     argTypes: {},
 };
 export default meta;

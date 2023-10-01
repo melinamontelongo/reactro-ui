@@ -1,11 +1,11 @@
 import { createGlobalStyle } from "styled-components";
 
-import retroGamingFont from "./fonts/retro-gaming.ttf";
-import alkhemikalFont from "./fonts/alkhemikal.ttf";
-import veniceFont from "./fonts/venice-classic.ttf";
-import bitcellFont from "./fonts/bitcell.ttf";
-import edunlineFont from "./fonts/edunline.ttf";
-import owreKyngeFont from "./fonts/owre-kynge.ttf";
+import retroGamingFont from "./fonts/retro-gaming.ttf";    //  Retro Gaming is a font by Daymarius on Dafont.com
+import alkhemikalFont from "./fonts/alkhemikal.ttf";      //  Alkhemikal is a font by jeti on Dafont.com
+import veniceFont from "./fonts/venice-classic.ttf";     // Venice Classic is a font by soixantedeux on Dafont.com
+import bitcellFont from "./fonts/bitcell.ttf";          //  Bit Cell is a font by memesbruh03 on Dafont.com
+import edunlineFont from "./fonts/edunline.ttf";       //  Edit Undo Line is a font by Ænigma on Dafont.com
+import owreKyngeFont from "./fonts/owre-kynge.ttf";   //  Owre Kynge is a font by jeti on Dafont.com
 
 const GlobalStyle = createGlobalStyle`
 @font-face {

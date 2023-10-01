@@ -6,6 +6,7 @@ import Button from "../Button/Button";
 const meta: Meta<typeof Dialog> = {
   component: Dialog,
   title: "Dialog",
+  tags: ["autodocs"],
   argTypes: {},
 };
 export default meta;

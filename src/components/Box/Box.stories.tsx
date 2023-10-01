@@ -5,6 +5,7 @@ import Box from "./Box";
 const meta: Meta<typeof Box> = {
   component: Box,
   title: "Box",
+  tags: ["autodocs"],
   argTypes: {},
 };
 export default meta;

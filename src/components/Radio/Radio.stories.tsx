@@ -6,6 +6,7 @@ import Fieldset from "../Fieldset/Fieldset";
 const meta: Meta<typeof Radio> = {
     component: Radio,
     title: "Radio",
+    tags: ["autodocs"],
     argTypes: {},
 };
 export default meta;

@@ -6,6 +6,7 @@ import Fieldset from "../Fieldset/Fieldset";
 const meta: Meta<typeof Checkbox> = {
     component: Checkbox,
     title: "Checkbox",
+    tags: ["autodocs"],
     argTypes: {},
 };
 export default meta;

@@ -1,11 +1,11 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import Textarea from "./Textarea";
-import Fieldset from "../Fieldset/Fieldset";
 
 const meta: Meta<typeof Textarea> = {
     component: Textarea,
     title: "Textarea",
+    tags: ["autodocs"],
     argTypes: {},
 };
 export default meta;
@@ -13,7 +13,7 @@ export default meta;
 type Story = StoryObj<typeof Textarea>;
 
 export const Label: Story = (args) => (
-    <Textarea {...args}/>
+    <Textarea {...args} />
 )
 
 Label.args = {
@@ -23,10 +23,10 @@ Label.args = {
     resize: "none",
     rows: 10,
     onChange: (e) => console.log(e.target.value),
-  };
+};
 
 export const NoLabel: Story = (args) => (
-    <Textarea {...args}/>
+    <Textarea {...args} />
 )
 
 NoLabel.args = {

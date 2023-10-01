@@ -5,6 +5,7 @@ import Select from "./Select";
 const meta: Meta<typeof Select> = {
     component: Select,
     title: "Select",
+    tags: ["autodocs"],
     argTypes: {},
 };
 export default meta;
@@ -13,7 +14,7 @@ type Story = StoryObj<typeof Select>;
 
 export const Label: Story = {
     render: () =>
-        <Select id="select-label" name="select-label" variant="primary" placeholder="--I'm the placeholder--" label="Select component with label and placeholder" style={{width: "500px"}}>
+        <Select id="select-label" name="select-label" variant="primary" placeholder="--I'm the placeholder--" label="Select component with label and placeholder" style={{ width: "500px" }}>
             <option value="value1">We're</option>
             <option value="value2">the</option>
             <option value="value3">options</option>
