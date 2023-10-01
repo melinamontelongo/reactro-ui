@@ -5,13 +5,13 @@ import base from "./base";
 const colors: Record<ComponentVariants, ComponentVariantProps> = {
     base: {
         bg: "#D2CC78",
-        color: "#1f1e11",
+        color: "#0f0f08",
 
         hoverBg: "#e3dd88",
-        hoverColor: "#47452a",
+        hoverColor: "#242314",
 
         activeBg: "#bdb766",
-        activeColor: "#14140a",
+        activeColor: "#030301",
 
         shadow: "#b3ad60",
 
@@ -55,9 +55,9 @@ const colors: Record<ComponentVariants, ComponentVariantProps> = {
     },
 };
 
-const croissant:DefaultTheme = {
+const cinnamon:DefaultTheme = {
     ...base,
     colors,
 }
 
-export default croissant;
+export default cinnamon;

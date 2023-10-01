@@ -24,7 +24,8 @@ const preview: Preview = {
     withThemeFromJSXProvider({
       themes: {
         strawberries: themes.strawberries,
-        croissant: themes.croissant,
+        cinnamon: themes.cinnamon,
+        cherry: themes.cherry,
         pigeon: themes.pigeon,
         lavender: themes.lavender,
       },
