@@ -3,6 +3,7 @@ export * from "./Button";
 export * from "./Checkbox";
 export * from "./Container";
 export * from "./Dialog";
+export * from "./Dropdown";
 export * from "./Fieldset";
 export * from "./GlobalStyle";
 export * from "./Input";
