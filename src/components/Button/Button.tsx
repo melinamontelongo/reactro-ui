@@ -1,29 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { ButtonProps, StyledButtonProps } from "./Button.d";
-import { getBaseProperty, getVariantColor } from "../../utils/variants";
+import { getBaseProperty, getVariantColor, getVariantSize } from "../../utils/variants";
+import { Sizes } from "../../types/theme";
 
-const getVariantSize = (props: Pick<StyledButtonProps, "size">) => {
-    let sizes;
-    switch (props.size) {
-        case "sm":
-            sizes = `
-            padding: 7px 10px 8px;
-            `
-            break;
-        case "md":
-            sizes = `
-            padding: 9px 25px 11px;
-            `
-            break;
-        case "lg":
-            sizes = `
-                padding: 14px 30px 16px;
-                `
-            break
-    }
-    return sizes;
-}
 const StyledButton = styled.button<StyledButtonProps>`
   line-height: 1;
   font-size: 15px;
@@ -32,7 +12,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   font-weight: bold;
   display: inline-block;
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-  ${(props) => getVariantSize(props)}
+  ${(props) => getVariantSize(props.size as Sizes)}
   color: ${(props) => getVariantColor(props.$variant!, props.theme, "color")};
   background-color:  ${(props) => getVariantColor(props.$variant!, props.theme, "bg")};
   border: ${(props) => getBaseProperty(props.theme, "borderOutset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};

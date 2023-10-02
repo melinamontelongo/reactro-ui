@@ -1,10 +1,10 @@
 import { ButtonHTMLAttributes } from "react";
-import { ComponentVariants } from "../../types/theme";
+import { ComponentVariants, Sizes } from "../../types/theme";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string;
   variant?: ComponentVariants;
-  size?: "sm" | "md" | "lg";
+  size?: Sizes,
 }
 
 export interface StyledButtonProps extends Omit<ButtonProps, "variant"> {

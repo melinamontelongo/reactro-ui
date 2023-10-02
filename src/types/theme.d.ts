@@ -14,3 +14,5 @@ export type ComponentVariantProps = {
 export type TextTags = "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
 export type FontFamily = "alkhemikal" | "retro" | "venice" | "bitcell" | "owre" | "edunline";
+
+export type Sizes = "sm" | "md" | "lg";
