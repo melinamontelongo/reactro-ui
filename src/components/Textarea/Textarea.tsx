@@ -19,6 +19,20 @@ resize: ${(props) => props.$resize};
     color:  ${(props) => props.theme.colors.base.placeholderColor};
 }
 border: ${(props) => getBaseProperty(props.theme, "borderInset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
+&::-webkit-scrollbar {
+    width: 15px;
+}
+&::-webkit-scrollbar-track {
+    background: ${(props) => getVariantColor(props.$variant!, props.theme, "color")};
+}
+&::-webkit-scrollbar-thumb {
+    background: ${(props) => getVariantColor(props.$variant!, props.theme, "bg")};
+    border: ${(props) => getBaseProperty(props.theme, "borderOutset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")}
+}
+  
+&::-webkit-scrollbar-thumb:hover {
+    background: ${(props) => getVariantColor(props.$variant!, props.theme, "hoverBg")};
+}
 `
 const Textarea = ({ label, variant = "default", resize = "both", ...props }: TextareaProps) => {
     return (<>

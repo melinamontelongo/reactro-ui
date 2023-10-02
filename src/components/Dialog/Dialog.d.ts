@@ -11,6 +11,8 @@ export interface DialogProps {
     variant?: ComponentVariants,
 }
 
-export interface StyledDialogProps extends Omit<DialogProps, "variant"> {
+export interface StyledDialogProps extends Omit<DialogProps, "variant" | "height" | "width"> {
     $variant: ComponentVariants,
+    $height: string,
+    $width: string,
 }

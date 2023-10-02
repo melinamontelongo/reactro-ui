@@ -6,6 +6,7 @@ import veniceFont from "./fonts/venice-classic.ttf";     // Venice Classic is a 
 import bitcellFont from "./fonts/bitcell.ttf";          //  Bit Cell is a font by memesbruh03 on Dafont.com
 import edunlineFont from "./fonts/edunline.ttf";       //  Edit Undo Line is a font by Ænigma on Dafont.com
 import owreKyngeFont from "./fonts/owre-kynge.ttf";   //  Owre Kynge is a font by jeti on Dafont.com
+import { getBaseProperty, getVariantColor } from "../../utils/variants";
 
 const GlobalStyle = createGlobalStyle`
 @font-face {
@@ -48,6 +49,22 @@ body {
 ::selection {
   color: ${(props) => props.theme.colors.base.bg};
   background: ${(props) => props.theme.colors.base.color};
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: ${(props) => props.theme.colors.base.color};
+}
+
+::-webkit-scrollbar-thumb {
+  background: ${(props) => props.theme.colors.base.bg};
+  border: ${(props) => getBaseProperty(props.theme, "borderOutset")} ${(props) => getVariantColor("base", props.theme, "shadow")}
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: ${(props) => props.theme.colors.base.hoverBg};
 }
 `
 

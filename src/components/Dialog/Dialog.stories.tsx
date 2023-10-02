@@ -79,3 +79,18 @@ Base.args = {
     <Button size={"lg"} text={"Cancel"} variant="base" />
   </div>,
 };
+
+export const Overflown: Story = (args) => (
+  <Dialog {...args} />
+);
+Overflown.args = {
+  title: "Overflown dialog",
+  content: <>
+    <p>This is the content of an overflown dialog box.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit veritatis ipsa provident totam, dicta dolorem iure corporis expedita? Odio tenetur rem velit explicabo ea fuga et voluptas, rerum perferendis beatae?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sit dolor vero iure accusamus illum qui voluptate, porro magnam, ab dolores eaque cum ducimus incidunt quas! Delectus magnam magni blanditiis.</p>
+  </>,
+  width: "400px",
+  height: "200px",
+
+};

@@ -42,7 +42,6 @@ flex-wrap: wrap;
 padding: 5px;
 gap: 2px;
 margin-top: 5px;
-overflow: hidden;
 position: absolute;
 `
 const List = styled.ul<StyledDropdownProps>`
