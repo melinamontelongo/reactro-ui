@@ -5,11 +5,15 @@ import { withThemeFromJSXProvider } from '@storybook/addon-styling';
 import themes from '../src/components/ThemeProvider/themes';
 import GlobalStyle from '../src/components/GlobalStyle/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
+import reactroTheme from './assets/reactroTheme';
 
 const GlobalStyles = GlobalStyle;
 
 const preview: Preview = {
   parameters: {
+    docs: {
+      theme: reactroTheme,
+    },
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
