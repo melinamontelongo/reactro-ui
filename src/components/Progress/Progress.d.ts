@@ -1,4 +1,3 @@
-import { HTMLAttributes } from "react";
 import { ComponentVariants } from "../../types/theme";
 
 export interface ProgressProps {

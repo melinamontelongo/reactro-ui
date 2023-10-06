@@ -1,4 +1,4 @@
-import { ReactElement, ReactHTMLElement, SelectHTMLAttributes } from "react";
+import { SelectHTMLAttributes } from "react";
 import { ComponentVariants } from "../../types/theme";
 
 export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
