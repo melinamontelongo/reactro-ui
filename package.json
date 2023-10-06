@@ -2,15 +2,22 @@
   "name": "reactro-ui",
   "version": "1.0.0",
   "description": "A retro-inspired component library for React",
-  "main": "index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build": "rollup -c --bundleConfigAsCjs"
   },
   "author": "Melina Montelongo",
   "license": "MIT",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.5",
+    "@rollup/plugin-node-resolve": "^15.2.2",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
     "@storybook/addon-essentials": "^7.4.5",
     "@storybook/addon-interactions": "^7.4.5",
     "@storybook/addon-links": "^7.4.5",
@@ -23,9 +30,13 @@
     "@storybook/testing-library": "^0.2.1",
     "@storybook/theming": "^7.4.6",
     "@types/react": "^18.2.22",
+    "@types/rollup-plugin-peer-deps-external": "^2.2.2",
     "@types/styled-components": "^5.1.27",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rollup": "^4.0.0",
+    "rollup-plugin-dts": "^6.0.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "storybook": "^7.4.5",
     "styled-components": "^6.0.8",
     "typescript": "^5.2.2"
