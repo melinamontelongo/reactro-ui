@@ -2,6 +2,11 @@ import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  staticDirs: ["./assets"],
+  managerHead: (head) => `
+    ${head}
+    <link rel="shortcut icon" href="/icon.png" />
+  `,
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
