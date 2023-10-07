@@ -12,7 +12,7 @@ export const getBaseProperty = (theme: DefaultTheme, property: keyof typeof them
     return theme[property];
 };
 
-export const getVariantSize = (size: Sizes) => {
+export const getVariantPadding = (size: Sizes) => {
     let sizes;
     switch (size) {
         case "sm":

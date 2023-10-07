@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { ButtonProps, StyledButtonProps } from "./Button.d";
-import { getBaseProperty, getVariantColor, getVariantSize } from "../../utils/variants";
+import { getBaseProperty, getVariantColor, getVariantPadding } from "../../utils/variants";
 import { Sizes } from "../../types/theme";
 
 const StyledButton = styled.button<StyledButtonProps>`
@@ -12,7 +12,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   font-weight: bold;
   display: inline-block;
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-  ${(props) => getVariantSize(props.size as Sizes)}
+  ${(props) => getVariantPadding(props.size as Sizes)}
   color: ${(props) => getVariantColor(props.$variant!, props.theme, "color")};
   background-color:  ${(props) => getVariantColor(props.$variant!, props.theme, "bg")};
   border: ${(props) => getBaseProperty(props.theme, "borderOutset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};

@@ -1,7 +1,7 @@
 import React from "react";
 import { DropdownProps, StyledDropdownProps } from "./Dropdown.d";
 import styled from "styled-components";
-import { getBaseProperty, getVariantColor, getVariantSize } from "../../utils/variants";
+import { getBaseProperty, getVariantColor, getVariantPadding } from "../../utils/variants";
 import { Sizes } from "../../types/theme";
 
 const Details = styled.details`
@@ -14,7 +14,7 @@ line-height: 1;
 font-size: 15px;
 font-weight: 700;
 font-weight: bold;
-${(props) => getVariantSize(props.size as Sizes)}
+${(props) => getVariantPadding(props.size as Sizes)}
 color: ${(props) => getVariantColor(props.$variant!, props.theme, "color")};
 background-color:  ${(props) => getVariantColor(props.$variant!, props.theme, "bg")};
 border: ${(props) => getBaseProperty(props.theme, "borderOutset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
