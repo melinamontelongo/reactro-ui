@@ -6,6 +6,7 @@ export * from "./Dialog";
 export * from "./Dropdown";
 export * from "./Fieldset";
 export * from "./GlobalStyle";
+export * from "./Icon";
 export * from "./Input";
 export * from "./Progress";
 export * from "./Radio";
