@@ -4,14 +4,22 @@
   "description": "A retro-inspired component library for React",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build": "rollup -c --bundleConfigAsCjs"
+    "build": "rollup -c --bundleConfigAsCjs",
+    "prepublishOnly": "npm run build"
   },
   "author": "Melina Montelongo",
   "license": "MIT",
+  "dependencies": {
+    "prop-types": "^15.8.1",
+    "styled-components": "^6.0.8"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.5",
     "@rollup/plugin-node-resolve": "^15.2.2",
@@ -40,5 +48,9 @@
     "storybook": "^7.4.5",
     "styled-components": "^6.0.8",
     "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
