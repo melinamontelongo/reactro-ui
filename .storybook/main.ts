@@ -5,7 +5,7 @@ const config: StorybookConfig = {
   staticDirs: ["./assets"],
   managerHead: (head) => `
     ${head}
-    <link rel="shortcut icon" href="/icon.png" />
+    <link rel="icon" type="image/png" href="./icon.png" />
   `,
   addons: [
     '@storybook/addon-links',
