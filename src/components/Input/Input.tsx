@@ -1,7 +1,17 @@
-import React from "react";
-import { InputProps, StyledInputProps } from "./Input.d";
+import React, { InputHTMLAttributes } from "react";
 import styled from "styled-components";
 import { getBaseProperty, getVariantColor } from "../../utils/variants";
+import { ComponentVariants } from "../ThemeProvider/ThemeProvider";
+
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+    type: "text" | "password" | "email" | "tel" | "number" | "url",
+    label?: string,
+    variant?: ComponentVariants,
+}
+
+export interface StyledInputProps extends Omit<InputProps, "variant"> {
+    $variant?: ComponentVariants;
+}
 
 const Label = styled.label`
 font-size: 15px;

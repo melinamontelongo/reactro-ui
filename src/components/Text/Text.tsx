@@ -1,6 +1,13 @@
-import React from "react";
+import React, { HTMLAttributes } from "react";
 import styled from "styled-components";
-import { TextProps } from "./Text.d";
+import { FontFamily, TextTags } from "../ThemeProvider/ThemeProvider";
+
+export interface TextProps extends HTMLAttributes<HTMLHeadingElement | HTMLParagraphElement> {
+    text: string,
+    tag?: TextTags,
+    fontSize?: string,
+    fontFamily?: FontFamily,
+}
 
 const StyledText = styled.div<Pick<TextProps, "fontSize" | "fontFamily">>`
     font-size: ${(props) => props.fontSize};

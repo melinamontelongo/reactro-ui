@@ -1,7 +1,17 @@
 import React from "react";
-import { ProgressProps, StyledProgressProps } from "./Progress.d";
 import styled from "styled-components";
 import { getBaseProperty, getVariantColor } from "../../utils/variants";
+import { ComponentVariants } from "../ThemeProvider/ThemeProvider";
+
+export interface ProgressProps {
+    percent?: number,
+    variant?: ComponentVariants,
+}
+
+export interface StyledProgressProps {
+    $percent: number,
+    $variant: ComponentVariants,
+}
 
 const Container = styled.div<StyledProgressProps>`
 height: 3rem;

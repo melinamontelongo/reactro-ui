@@ -1,8 +1,19 @@
-import React from "react";
-import { IconProps, StyledIconProps } from "./Icon.d";
+import React, { HTMLAttributes } from "react";
 import styled from "styled-components";
-import { Sizes } from "../../types/theme";
+import { ComponentVariants, Sizes } from "../ThemeProvider/ThemeProvider";
 import { getVariantColor } from "../../utils/variants";
+
+export interface IconProps extends HTMLAttributes<HTMLDivElement> {
+    text: string,
+    icon: React.ReactNode,
+    size?: Sizes,
+    variant?: ComponentVariants,
+}
+
+export interface StyledIconProps extends Omit<IconProps, "size" | "variant"> {
+    $size: Sizes,
+    $variant: ComponentVariants,
+}
 
 const getIconSize = (size: Sizes) => {
     switch (size) {
@@ -62,7 +73,7 @@ padding: 2px 5px;
 text-align: center;
 text-wrap: wrap;
 `
-const Icon = ({ text, icon, size = "md", variant="default", ...props }: IconProps) => {
+const Icon = ({ text, icon, size = "md", variant = "default", ...props }: IconProps) => {
     return (
         <IconContainer {...props} $size={size} $variant={variant} tabIndex={0}>
             <StyledIcon $size={size} $variant={variant}>

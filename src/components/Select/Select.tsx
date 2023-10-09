@@ -1,7 +1,18 @@
-import React from "react";
-import { SelectProps, StyledSelectProps } from "./Select.d";
+import React, { SelectHTMLAttributes } from "react";
 import styled from "styled-components";
 import { getBaseProperty, getVariantColor } from "../../utils/variants";
+import { ComponentVariants } from "../ThemeProvider/ThemeProvider";
+
+export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
+    label?: string,
+    variant?: ComponentVariants,
+    placeholder?: string,
+    children: React.ReactNode,
+}
+
+export interface StyledSelectProps extends Omit<SelectProps, "variant"> {
+    $variant?: ComponentVariants;
+}
 
 const Label = styled.label`
 font-size: 15px;

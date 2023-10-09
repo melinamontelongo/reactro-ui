@@ -1,7 +1,16 @@
-import React from "react";
-import { RadioProps, StyledRadioProps } from "./Radio.d";
+import React, { InputHTMLAttributes } from "react";
 import styled from "styled-components";
 import { getBaseProperty, getVariantColor } from "../../utils/variants";
+import { ComponentVariants } from "../ThemeProvider/ThemeProvider";
+
+export interface RadioProps extends InputHTMLAttributes<HTMLInputElement> {
+    label: string,
+    variant?: ComponentVariants,
+}
+
+export interface StyledRadioProps extends Omit<RadioProps, "variant"> {
+    $variant?: ComponentVariants;
+}
 
 const Label = styled.label<Pick<StyledRadioProps, "$variant">>`
 display: block;

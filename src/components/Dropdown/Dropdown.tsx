@@ -1,8 +1,19 @@
-import React from "react";
-import { DropdownProps, StyledDropdownProps } from "./Dropdown.d";
+import React, { DetailsHTMLAttributes } from "react";
 import styled from "styled-components";
 import { getBaseProperty, getVariantColor, getVariantPadding } from "../../utils/variants";
-import { Sizes } from "../../types/theme";
+import { ComponentVariants, Sizes } from "../ThemeProvider/ThemeProvider";
+
+export interface DropdownProps extends DetailsHTMLAttributes<HTMLDetailsElement> {
+    text?: string;
+    variant?: ComponentVariants;
+    size?: Sizes;
+    isList?: boolean;
+    children?: React.ReactNode,
+}
+
+export interface StyledDropdownProps extends Omit<DropdownProps, "variant"> {
+    $variant?: ComponentVariants,
+}
 
 const Details = styled.details`
 

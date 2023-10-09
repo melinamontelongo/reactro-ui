@@ -1,6 +1,10 @@
-import styled from "styled-components";
-import { ContainerProps } from "./Container.d";
 import React from "react";
+import styled from "styled-components";
+
+export interface ContainerProps {
+    children: React.ReactNode,
+    size?: "sm" | "md" | "lg" | "xl",
+}
 
 const getContainerSizes = (props: ContainerProps) => {
     let sizes;
@@ -42,7 +46,7 @@ const getContainerSizes = (props: ContainerProps) => {
 }
 
 const StyledContainer = styled.div<ContainerProps>`
-    ${(props) => props.size? getContainerSizes(props) : "max-width: 100%"}
+    ${(props) => props.size ? getContainerSizes(props) : "max-width: 100%"}
     margin: auto;
 `
 const Container = ({ children, size }: ContainerProps) => {

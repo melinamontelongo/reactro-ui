@@ -1,7 +1,18 @@
-import React from "react";
-import { TextareaProps, StyledTextareaProps } from "./Textarea.d";
+import React, { TextareaHTMLAttributes } from "react";
 import styled from "styled-components";
 import { getBaseProperty, getVariantColor } from "../../utils/variants";
+import { ComponentVariants } from "../ThemeProvider/ThemeProvider";
+
+export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+    label?: string,
+    variant?: ComponentVariants,
+    resize?: "both" | "horizontal" | "vertical" | "none",
+}
+
+export interface StyledTextareaProps extends Omit<TextareaProps, "variant" | "resize"> {
+    $variant?: ComponentVariants,
+    $resize?: "both" | "horizontal" | "vertical" | "none",
+}
 
 const Label = styled.label`
 font-size: 15px;

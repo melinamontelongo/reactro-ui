@@ -1,7 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import { BoxProps, StyledBoxProps } from "./Box.d";
 import { getBaseProperty, getVariantColor } from "../../utils/variants";
+import { ComponentVariants } from "../ThemeProvider/ThemeProvider";
+
+export interface BoxProps {
+    children: React.ReactNode,
+    width: string,
+    height: string,
+    variant?: ComponentVariants,
+}
+
+export interface StyledBoxProps extends Pick<BoxProps, "children"> {
+    $variant?: ComponentVariants,
+    $width: string,
+    $height: string,
+}
 
 const StyledBox = styled.div<StyledBoxProps>`
 width: ${(props) => props.$width};

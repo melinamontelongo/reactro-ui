@@ -1,8 +1,24 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import styled from "styled-components";
-import { DialogProps, StyledDialogProps } from "./Dialog.d";
 import Button from "../Button/Button";
 import { getBaseProperty, getVariantColor } from "../../utils/variants";
+import { ComponentVariants } from "../ThemeProvider/ThemeProvider";
+
+export interface DialogProps {
+    width: string,
+    height: string,
+    title: string,
+    content: React.ReactNode,
+    footer?: React.ReactNode,
+    onClose?: MouseEventHandler<HTMLButtonElement>,
+    variant?: ComponentVariants,
+}
+
+export interface StyledDialogProps extends Omit<DialogProps, "variant" | "height" | "width"> {
+    $variant: ComponentVariants,
+    $height: string,
+    $width: string,
+}
 
 const ContentContainer = styled.div<Pick<StyledDialogProps, "$height" | "$variant">>`
     height: ${(props) => props.$height};

@@ -1,8 +1,17 @@
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 import styled from "styled-components";
-import { ButtonProps, StyledButtonProps } from "./Button.d";
 import { getBaseProperty, getVariantColor, getVariantPadding } from "../../utils/variants";
-import { Sizes } from "../../types/theme";
+import { ComponentVariants, Sizes } from "../ThemeProvider/ThemeProvider";
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+    text?: string;
+    variant?: ComponentVariants;
+    size?: Sizes,
+}
+
+export interface StyledButtonProps extends Omit<ButtonProps, "variant"> {
+    $variant?: ComponentVariants,
+}
 
 const StyledButton = styled.button<StyledButtonProps>`
   line-height: 1;
@@ -30,7 +39,7 @@ const StyledButton = styled.button<StyledButtonProps>`
 const Button = ({ size = "md", variant = "default", text, ...props }: ButtonProps) => {
     return (
         <StyledButton
-            $variant={variant} 
+            $variant={variant}
             size={size}
             {...props}>
             {text}

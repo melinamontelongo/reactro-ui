@@ -1,7 +1,16 @@
-import React from "react";
-import { CheckboxProps, StyledCheckboxProps } from "./Checkbox.d";
+import React, { InputHTMLAttributes } from "react";
 import styled from "styled-components";
 import { getBaseProperty, getVariantColor } from "../../utils/variants";
+import { ComponentVariants } from "../ThemeProvider/ThemeProvider";
+
+export interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
+    label: string,
+    variant?: ComponentVariants,
+}
+
+export interface StyledCheckboxProps extends Omit<CheckboxProps, "variant"> {
+    $variant?: ComponentVariants,
+}
 
 const Label = styled.label<Pick<StyledCheckboxProps, "$variant">>`
 display: block;
@@ -63,8 +72,8 @@ background-color: ${(props) => props.theme.colors.base.hoverBg};
 const Checkbox = ({ label, variant = "default", ...props }: CheckboxProps) => {
     return (
         <Label $variant={variant}>{label}
-            <Input type="checkbox" {...props}/>
-            <Checkmark className="checkmark" $variant={variant}/>
+            <Input type="checkbox" {...props} />
+            <Checkmark className="checkmark" $variant={variant} />
         </Label>
     )
 };
