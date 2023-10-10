@@ -13,7 +13,7 @@ export default meta;
 
 type Story = StoryObj<typeof Checkbox>;
 
-export const AllCheckboxes: Story = {
+export const Checkboxes: Story = {
     render: () => <>
         <Fieldset legend="Checkbox variants">
             <Checkbox id="checkbox-default" label="Default" />

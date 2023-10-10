@@ -12,7 +12,7 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const allButtons: Story = {
+export const Buttons: Story = {
   render: () => <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
     <div>
       <h2>Variants</h2>

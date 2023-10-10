@@ -13,7 +13,7 @@ export default meta;
 
 type Story = StoryObj<typeof Container>;
 
-export const Default: Story = {
+export const Containers: Story = {
     render: () => <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
         <Container size="sm">
             <Box width="100%" height="fit"><>I'm an "sm" container, which means I'll have a width of 100% until sm breakpoint (576px).</></Box>

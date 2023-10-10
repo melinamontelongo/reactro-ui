@@ -12,7 +12,7 @@ export default meta;
 
 type Story = StoryObj<typeof Icon>;
 
-export const Default: Story = {
+export const Icons: Story = {
     render: () =>
         <>
             <div>

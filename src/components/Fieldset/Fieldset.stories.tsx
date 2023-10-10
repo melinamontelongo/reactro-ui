@@ -12,7 +12,7 @@ export default meta;
 
 type Story = StoryObj<typeof Fieldset>;
 
-export const Default: Story = {
+export const Fieldsets: Story = {
     render: () => <>
         <Fieldset legend="Fieldset">
         I'm a default fieldset!

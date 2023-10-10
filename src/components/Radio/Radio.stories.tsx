@@ -13,7 +13,7 @@ export default meta;
 
 type Story = StoryObj<typeof Radio>;
 
-export const AllRadios: Story = {
+export const Radios: Story = {
     render: () => <>
         <Fieldset legend="Radio variants">
             <Radio id="default-radio"  name="default" label="Default"/>
