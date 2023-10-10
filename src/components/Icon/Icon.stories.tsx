@@ -19,17 +19,17 @@ export const Default: Story = {
                 <h2>Sizes</h2>
                 <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
                     <Icon
-                        icon={<img src="/icon.png" />}
+                        icon={<img src="./icon.png" />}
                         text={"Small"}
                         size={"sm"}
                     />
                     <Icon
-                        icon={<img src="/icon.png" />}
+                        icon={<img src="./icon.png" />}
                         text={"Medium"}
                         size={"md"}
                     />
                     <Icon
-                        icon={<img src="/icon.png" />}
+                        icon={<img src="./icon.png" />}
                         text={"Large"}
                         size={"lg"}
                     />
@@ -38,22 +38,22 @@ export const Default: Story = {
                 <h2>Variants</h2>
                 <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
                     <Icon
-                        icon={<img src="/icon.png" />}
+                        icon={<img src="./icon.png" />}
                         text={"Default"}
                         variant={"default"}
                     />
                     <Icon
-                        icon={<img src="/icon.png" />}
+                        icon={<img src="./icon.png" />}
                         text={"Primary"}
                         variant={"primary"}
                     />
                     <Icon
-                        icon={<img src="/icon.png" />}
+                        icon={<img src="./icon.png" />}
                         text={"Secondary"}
                         variant={"secondary"}
                     />
                     <Icon
-                        icon={<img src="/icon.png" />}
+                        icon={<img src="./icon.png" />}
                         text={"Base"}
                         variant={"base"}
                     />
