@@ -26,10 +26,15 @@ padding: 5px 10px;
 background-color: ${(props) => props.theme.colors.base.hoverBg};
 color: ${(props) => props.theme.colors.base.color};
 resize: ${(props) => props.$resize};
+&:focus{
+    outline: none;
+    box-shadow: none;
+    border: ${(props) => getBaseProperty(props.theme, "borderInset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
+}
 &::placeholder{
     color:  ${(props) => props.theme.colors.base.placeholderColor};
 }
-border: ${(props) => getBaseProperty(props.theme, "borderInset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
+border: ${(props) => getBaseProperty(props.theme, "borderOutset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
 &::-webkit-scrollbar {
     width: 15px;
 }

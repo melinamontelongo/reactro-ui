@@ -29,7 +29,12 @@ cursor: ${(props) => props.disabled ? "not-allowed" : "auto"};
 &::placeholder{
     color:  ${(props) => props.theme.colors.base.placeholderColor};
 }
-border: ${(props) => getBaseProperty(props.theme, "borderInset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
+border: ${(props) => getBaseProperty(props.theme, "borderOutset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
+&:focus-visible{
+    outline: none;
+    box-shadow: none;
+    border: ${(props) => getBaseProperty(props.theme, "borderInset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
+}
 `
 const Input = ({ type, variant = "default", label, ...props }: InputProps) => {
     return (<>

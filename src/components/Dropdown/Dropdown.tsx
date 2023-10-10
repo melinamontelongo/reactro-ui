@@ -29,14 +29,21 @@ ${(props) => getVariantPadding(props.size as Sizes)}
 color: ${(props) => getVariantColor(props.$variant!, props.theme, "color")};
 background-color:  ${(props) => getVariantColor(props.$variant!, props.theme, "bg")};
 border: ${(props) => getBaseProperty(props.theme, "borderOutset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
-&:hover {
+&:hover{
     background-color: ${(props) => getVariantColor(props.$variant!, props.theme, "hoverBg")};
     color: ${(props) => getVariantColor(props.$variant!, props.theme, "hoverColor")};
 }
-&:active {
+&:active{
+    outline: none;
     background-color:  ${(props) => getVariantColor(props.$variant!, props.theme, "activeBg")};
     color:  ${(props) => getVariantColor(props.$variant!, props.theme, "activeColor")};
     border: ${(props) => getBaseProperty(props.theme, "borderInset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
+}
+&:focus-visible{
+    outline: none;
+    box-shadow: none;
+    text-decoration: underline 2px ${(props) => getVariantColor(props.$variant!, props.theme, "color")};
+    text-underline-offset: 2px;
 }
 `
 

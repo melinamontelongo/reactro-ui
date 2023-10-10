@@ -34,7 +34,12 @@ cursor: ${(props) => props.disabled ? "not-allowed" : "auto"};
     color: ${(props) => props.theme.colors.base.bg};
     background: ${(props) => props.theme.colors.base.color};
 }
-border: ${(props) => getBaseProperty(props.theme, "borderInset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
+border: ${(props) => getBaseProperty(props.theme, "borderOutset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
+&:focus-visible{
+    outline: none;
+    box-shadow: none;
+    border: ${(props) => getBaseProperty(props.theme, "borderInset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
+}
 `
 const Select = ({ variant = "default", label, placeholder, children, ...props }: SelectProps) => {
     return (<>

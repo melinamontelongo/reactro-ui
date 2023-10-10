@@ -29,11 +29,18 @@ const StyledButton = styled.button<StyledButtonProps>`
       background-color: ${(props) => !props.disabled && getVariantColor(props.$variant!, props.theme, "hoverBg")};
       color: ${(props) => !props.disabled && getVariantColor(props.$variant!, props.theme, "hoverColor")};
   }
-  &:active {
+  &:active{
       background-color:  ${(props) => !props.disabled && getVariantColor(props.$variant!, props.theme, "activeBg")};
       color:  ${(props) => !props.disabled && getVariantColor(props.$variant!, props.theme, "activeColor")};
       border: ${(props) => !props.disabled && getBaseProperty(props.theme, "borderInset")} ${(props) => !props.disabled && getVariantColor(props.$variant!, props.theme, "shadow")};
-  }`
+  }
+  &:focus-visible{
+    outline: none;
+    box-shadow: none;
+    text-decoration: underline 2px ${(props) => getVariantColor(props.$variant!, props.theme, "color")};
+    text-underline-offset: 2px;
+  }
+  `
     ;
 
 const Button = ({ size = "md", variant = "default", text, ...props }: ButtonProps) => {
