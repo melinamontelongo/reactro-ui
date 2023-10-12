@@ -2,8 +2,6 @@
 
 Reactro UI is a retro-inspired React component library with Typescript support.
 
-[![npm version](https://badge.fury.io/js/reactro-ui-lib.svg)](https://badge.fury.io/js/reactro-ui-lib)
-
 <div align="center">
 <img src="https://repository-images.githubusercontent.com/695400128/5b5e462e-ec6a-4ad1-b054-2bfe554115a3" alt="reactro logo" />  
 </div>
