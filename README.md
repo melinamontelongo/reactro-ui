@@ -4,7 +4,9 @@ Reactro UI is a retro-inspired React component library with Typescript support.
 
 [![npm version](https://badge.fury.io/js/reactro-ui-lib.svg)](https://badge.fury.io/js/reactro-ui-lib)
 
-<img height="300px" src=".storybook/assets/logo.png" alt="reactro logo" />
+<div align="center">
+<img src="https://repository-images.githubusercontent.com/695400128/5b5e462e-ec6a-4ad1-b054-2bfe554115a3" alt="reactro logo" />  
+</div>
 
 See all the available components on [Reactro UI's Storybook](https://melinamontelongo.github.io/reactro-ui)
 
@@ -31,17 +33,25 @@ npm install styled-components
 
 Once everything is installed, you can import any Reactro UI's component as seen on Storybook. 
 
-Wrap everything with `ThemeProvider` and include `GlobalStyle` so the styles are correctly applied.
-
-`ThemeProvider` accepts a `theme` prop, where you can choose from the currently available themes. 
+Wrap everything with `ThemeProvider` so both theming and styles are correctly applied.
 
 ```js
-import { Button, GlobalStyle, ThemeProvider } from 'reactro-ui-lib';
+import { Button, ThemeProvider } from 'reactro-ui-lib';
 
 <ThemeProvider>
-    <GlobalStyle />
     <Button text="Click me" />
 </ThemeProvider>
 ```
+
+`ThemeProvider` accepts both a `theme` and a `font` prop, where you can choose from the currently available themes and fonts. 
+
+```js
+import { Button, ThemeProvider } from 'reactro-ui-lib';
+
+<ThemeProvider theme="cherry" font="venice">
+    <Button text="Click me" />
+</ThemeProvider>
+```
+
 ##  Copyright
 This library was built by [Melina Montelongo](https://github.com/melinamontelongo) and is provided under the MIT license.
