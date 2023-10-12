@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { ExecutionProps, createGlobalStyle } from "styled-components";
 
 import retroGamingFont from "./fonts/retro-gaming.ttf";    //  Retro Gaming is a font by Daymarius on Dafont.com
 import alkhemikalFont from "./fonts/alkhemikal.ttf";      //  Alkhemikal is a font by jeti on Dafont.com
@@ -7,8 +7,12 @@ import bitcellFont from "./fonts/bitcell.ttf";          //  Bit Cell is a font b
 import edunlineFont from "./fonts/edunline.ttf";       //  Edit Undo Line is a font by Ænigma on Dafont.com
 import owreKyngeFont from "./fonts/owre-kynge.ttf";   //  Owre Kynge is a font by jeti on Dafont.com
 import { getBaseProperty, getVariantColor } from "../../utils/variants";
+import { FontFamily } from "../ThemeProvider/ThemeProvider";
 
-const GlobalStyle = createGlobalStyle`
+interface GlobalStyleProps extends ExecutionProps {
+  $font?: FontFamily;
+}
+const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
 @font-face {
     font-family: "retro";
     src: url(${retroGamingFont}) format('truetype');
@@ -34,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
   src: url(${owreKyngeFont}) format('truetype');
 }
 *{
-  font-family: "retro", Helvetica, Sans-Serif;
+  font-family: ${(props) => props.$font}, Helvetica, Sans-Serif;
 }
 body {
     background-color: ${(props) => props.theme.colors.base.bg};

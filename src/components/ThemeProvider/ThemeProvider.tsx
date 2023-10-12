@@ -1,6 +1,7 @@
 import React from "react";
 import { ThemeProvider as SCThemeProvider } from "styled-components";
 import themes from "./themes";
+import GlobalStyle from "../GlobalStyle";
 
 export type ComponentVariants = "primary" | "secondary" | "base" | "default";
 
@@ -24,11 +25,13 @@ export type Sizes = "sm" | "md" | "lg";
 export type ThemeProviderProps = {
     children: React.ReactNode,
     theme: keyof typeof themes;
+    font?: FontFamily;
 };
 
-const ThemeProvider = ({ children, theme }: ThemeProviderProps) => {
+const ThemeProvider = ({ children, theme, font = "retro" }: ThemeProviderProps) => {
     return (
         <SCThemeProvider theme={themes[theme]}>
+            <GlobalStyle $font={font}/>
             {children}
         </SCThemeProvider>
     )
