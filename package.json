@@ -16,6 +16,19 @@
   },
   "author": "Melina Montelongo",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/melinamontelongo/reactro-ui.git"
+  },
+  "homepage": "https://melinamontelongo.github.io/reactro-ui/",
+  "keywords": [
+    "ui-library",
+    "component-library",
+    "reactjs",
+    "typescript",
+    "styled-components",
+    "retro"
+  ],
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.5",
     "@rollup/plugin-node-resolve": "^15.2.2",
