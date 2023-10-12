@@ -4,7 +4,7 @@ import { getBaseProperty, getVariantColor, getVariantPadding } from "../../utils
 import { ComponentVariants, Sizes } from "../ThemeProvider/ThemeProvider";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    text?: string;
+    children?: string;
     variant?: ComponentVariants;
     size?: Sizes,
 }
@@ -43,13 +43,13 @@ const StyledButton = styled.button<StyledButtonProps>`
   `
     ;
 
-const Button = ({ size = "md", variant = "default", text, ...props }: ButtonProps) => {
+const Button = ({ size = "md", variant = "default", children, ...props }: ButtonProps) => {
     return (
         <StyledButton
             $variant={variant}
             size={size}
             {...props}>
-            {text}
+            {children}
         </StyledButton>
     );
 }

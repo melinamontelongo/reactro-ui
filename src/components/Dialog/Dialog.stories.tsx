@@ -24,8 +24,8 @@ Default.args = {
   width: "400px",
   height: "200px",
   footer: <div style={{ display: "flex", flexDirection: "row", justifyContent: "end", gap: "10px" }}>
-    <Button size={"lg"} text={"OK"} />
-    <Button size={"lg"} text={"Cancel"} />
+    <Button size={"lg"} variant="primary">OK</Button>
+    <Button size={"lg"} variant="primary">Cancel</Button>
   </div>,
 };
 
@@ -41,8 +41,8 @@ Primary.args = {
   height: "200px",
   variant: "primary",
   footer: <div style={{ display: "flex", flexDirection: "row", justifyContent: "end", gap: "10px" }}>
-    <Button size={"lg"} text={"OK"} variant="primary" />
-    <Button size={"lg"} text={"Cancel"} variant="primary" />
+    <Button size={"lg"} variant="primary">OK</Button>
+    <Button size={"lg"} variant="primary">Cancel</Button>
   </div>,
 };
 
@@ -58,8 +58,8 @@ Secondary.args = {
   height: "200px",
   variant: "secondary",
   footer: <div style={{ display: "flex", flexDirection: "row", justifyContent: "end", gap: "10px" }}>
-    <Button size={"lg"} text={"OK"} variant="secondary" />
-    <Button size={"lg"} text={"Cancel"} variant="secondary" />
+    <Button size={"lg"} variant="primary">OK</Button>
+    <Button size={"lg"} variant="primary">Cancel</Button>
   </div>,
 };
 
@@ -75,8 +75,8 @@ Base.args = {
   height: "200px",
   variant: "base",
   footer: <div style={{ display: "flex", flexDirection: "row", justifyContent: "end", gap: "10px" }}>
-    <Button size={"lg"} text={"OK"} variant="base" />
-    <Button size={"lg"} text={"Cancel"} variant="base" />
+    <Button size={"lg"} variant="primary">OK</Button>
+    <Button size={"lg"} variant="primary">Cancel</Button>
   </div>,
 };
 
@@ -88,7 +88,7 @@ Overflown.args = {
   content: <>
     <p>This is the content of an overflown dialog box.</p>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit veritatis ipsa provident totam, dicta dolorem iure corporis expedita? Odio tenetur rem velit explicabo ea fuga et voluptas, rerum perferendis beatae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sit dolor vero iure accusamus illum qui voluptate, porro magnam, ab dolores eaque cum ducimus incidunt quas! Delectus magnam magni blanditiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sit dolor vero iure accusamus illum qui voluptate, porro magnam, ab dolores eaque cum ducimus incidunt quas! Delectus magnam magni blanditiis.</p>
   </>,
   width: "400px",
   height: "200px",

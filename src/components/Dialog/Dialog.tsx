@@ -68,7 +68,7 @@ const Dialog = ({ width, height, title, content, footer, onClose, variant = "def
                 <Title>
                     {title}
                 </Title>
-                <Button size="sm" text="X" onClick={onClose} variant={variant} />
+                <Button size="sm" onClick={onClose} variant={variant}>X</Button>
             </TitleBar>
             <ContentContainer $height={height} $variant={variant}>
                 <div>
