@@ -39,7 +39,7 @@ Wrap everything with `ThemeProvider` so both theming and styles are correctly ap
 import { Button, ThemeProvider } from 'reactro-ui-lib';
 
 <ThemeProvider>
-    <Button text="Click me" />
+    <Button>Click me</Button>
 </ThemeProvider>
 ```
 
@@ -49,7 +49,7 @@ import { Button, ThemeProvider } from 'reactro-ui-lib';
 import { Button, ThemeProvider } from 'reactro-ui-lib';
 
 <ThemeProvider theme="cherry" font="venice">
-    <Button text="Click me" />
+    <Button>Click me</Button>
 </ThemeProvider>
 ```
 

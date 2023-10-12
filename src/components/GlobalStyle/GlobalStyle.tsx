@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   src: url(${owreKyngeFont}) format('truetype');
 }
 *{
-  font-family: ${(props) => props.$font}, Helvetica, Sans-Serif;
+  font-family: ${(props) => props.$font ? props.$font : "retro"}, Helvetica, Sans-Serif;
 }
 body {
     background-color: ${(props) => props.theme.colors.base.bg};

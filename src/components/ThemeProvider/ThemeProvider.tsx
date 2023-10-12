@@ -28,7 +28,7 @@ export type ThemeProviderProps = {
     font?: FontFamily;
 };
 
-const ThemeProvider = ({ children, theme, font = "retro" }: ThemeProviderProps) => {
+const ThemeProvider = ({ children, theme, font }: ThemeProviderProps) => {
     return (
         <SCThemeProvider theme={themes[theme]}>
             <GlobalStyle $font={font}/>
@@ -38,5 +38,6 @@ const ThemeProvider = ({ children, theme, font = "retro" }: ThemeProviderProps) 
 }
 ThemeProvider.defaultProps = {
     theme: "strawberries",
+    font: "retro",
 };
 export default ThemeProvider;
