@@ -15,12 +15,11 @@ export interface StyledDropdownProps extends Omit<DropdownProps, "variant"> {
     $variant?: ComponentVariants,
 }
 
-const Details = styled.details`
+export const DropdownDetails = styled.details`
 
 `
 
-const Summary = styled.summary<StyledDropdownProps>`
-width: max-content;
+export const DropdownSummary = styled.summary<StyledDropdownProps>`
 line-height: 1;
 font-size: 15px;
 font-weight: 700;
@@ -47,8 +46,7 @@ border: ${(props) => getBaseProperty(props.theme, "borderOutset")} ${(props) => 
 }
 `
 
-const Container = styled.div<StyledDropdownProps>`
-width: max-content;
+export const DropdownContainer = styled.div<StyledDropdownProps>`
 min-width: 10rem;
 max-width: 25rem;
 background-color:  ${(props) => getVariantColor(props.$variant!, props.theme, "bg")};
@@ -62,8 +60,7 @@ gap: 2px;
 margin-top: 5px;
 position: absolute;
 `
-const List = styled.ul<StyledDropdownProps>`
-width: max-content;
+export const DropdownList = styled.ul<StyledDropdownProps>`
 min-width: 10rem;
 max-width: 25rem;
 background-color:  ${(props) => getVariantColor(props.$variant!, props.theme, "bg")};
@@ -88,19 +85,18 @@ position: absolute;
 `
 const Dropdown = ({ text, variant = "default", size = "md", isList = true, children, ...props }: DropdownProps) => {
     return (
-        <Details {...props}>
-            <Summary $variant={variant} size={size}>{text}</Summary>
+        <DropdownDetails {...props}>
+            <DropdownSummary $variant={variant} size={size}>{text}</DropdownSummary>
             {isList ?
-                <List $variant={variant}>
+                <DropdownList $variant={variant}>
                     {children}
-                </List>
+                </DropdownList>
                 :
-                <Container $variant={variant}>
+                <DropdownContainer $variant={variant}>
                     {children}
-                </Container>
+                </DropdownContainer>
             }
-
-        </Details>
+        </DropdownDetails>
     )
 }
 

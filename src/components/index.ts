@@ -8,6 +8,7 @@ export { default as Fieldset } from "./Fieldset";
 export { default as GlobalStyle } from "./GlobalStyle";
 export { default as Icon } from "./Icon";
 export { default as Input } from "./Input";
+export { default as Navbar } from "./Navbar";
 export { default as Progress } from "./Progress";
 export { default as Radio } from "./Radio";
 export { default as Select } from "./Select";
