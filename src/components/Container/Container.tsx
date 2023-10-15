@@ -1,7 +1,7 @@
-import React from "react";
+import React, { HTMLAttributes } from "react";
 import styled from "styled-components";
 
-export interface ContainerProps {
+export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
     children: React.ReactNode,
     size?: "sm" | "md" | "lg" | "xl",
 }
