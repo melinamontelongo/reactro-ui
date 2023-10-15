@@ -85,7 +85,7 @@ export const Base: Story = {
 export const WithLogo: Story = {
     render: () =>
         <Navbar
-            brand={<a href="#" target="_blank"><img src="./icon.png" style={{ height: "80px" }} /></a>}
+            brand={<a href="#" target="_blank"><img src="./icon.png" style={{ height: "60px" }} /></a>}
             items={[
                 <Button size="sm">Home</Button>,
                 <Button size="sm">Favorites</Button>,

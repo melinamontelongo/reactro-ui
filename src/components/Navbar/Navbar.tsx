@@ -19,7 +19,7 @@ const StyledNavbar = styled.div<StyledNavbarProps>`
     top: 0;
     left: 0;
     right: 0;
-    height: 5rem;
+    height: 4rem;
     background-color: ${(props) => getVariantColor(props.$variant!, props.theme, "bg")};
     border: ${(props) => getBaseProperty(props.theme, "borderOutset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
 `
@@ -72,7 +72,7 @@ const Navbar = ({ items, brand, variant = "default" }: NavbarProps) => {
                         return <>{item}</>
                     })}
                 </Items>
-                <ResponsiveItems text="..." isList={false}>
+                <ResponsiveItems text="..." isList={false} variant={variant}>
                     {items && items?.map((item) => {
                         return <>{item}</>
                     })}
