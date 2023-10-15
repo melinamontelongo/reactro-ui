@@ -12,15 +12,15 @@ const getContainerSizes = (props: ContainerProps) => {
         case "sm":
             sizes = `
             @media(max-width: 576px){
-                max-width: 100%;
+                width: 100%;
             }
-            max-width: 540px;
+            width: 540px;
             `
             break;
         case "md":
             sizes = `
             @media(max-width: 768px){
-                max-width: 100%;
+                width: 100%;
             }
             max-width: 720px;
             `
@@ -28,7 +28,7 @@ const getContainerSizes = (props: ContainerProps) => {
         case "lg":
             sizes = `
             @media(max-width: 992px){
-                max-width: 100%;
+                width: 100%;
             }
             max-width: 960px;
             `
@@ -36,7 +36,7 @@ const getContainerSizes = (props: ContainerProps) => {
         case "xl":
             sizes = `
             @media(max-width: 1200px){
-                max-width: 100%;
+                width: 100%;
             }
             max-width: 1140px;
             `
