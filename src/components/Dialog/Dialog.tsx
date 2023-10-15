@@ -5,8 +5,8 @@ import { getBaseProperty, getVariantColor } from "../../utils/variants";
 import { ComponentVariants } from "../ThemeProvider/ThemeProvider";
 
 export interface DialogProps {
-    width: string,
-    height: string,
+    width?: string,
+    height?: string,
     title: string,
     content: React.ReactNode,
     footer?: React.ReactNode,
@@ -61,7 +61,7 @@ const StyledDialog = styled.div<Pick<StyledDialogProps, "$width" | "$variant">>`
     background-color: ${(props) => getVariantColor(props.$variant, props.theme, "hoverBg")};
     border: ${(props) => props.theme.borderOutset} ${(props) => getVariantColor(props.$variant, props.theme, "shadow")};
     `
-const Dialog = ({ width, height, title, content, footer, onClose, variant = "default" }: DialogProps) => {
+const Dialog = ({ width = "fit-content", height = "fit-content", title, content, footer, onClose, variant = "default" }: DialogProps) => {
     return (
         <StyledDialog $width={width} $variant={variant}>
             <TitleBar $variant={variant}>
