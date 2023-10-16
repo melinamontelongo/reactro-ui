@@ -18,7 +18,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/melinamontelongo/reactro-ui.git"
+    "url": "git+https://github.com/melinamontelongo/reactro-ui.git"
   },
   "homepage": "https://melinamontelongo.github.io/reactro-ui/",
   "keywords": [
