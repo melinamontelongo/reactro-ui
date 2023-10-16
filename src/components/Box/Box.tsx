@@ -5,8 +5,8 @@ import { ComponentVariants } from "../ThemeProvider/ThemeProvider";
 
 export interface BoxProps {
     children: React.ReactNode,
-    width: string,
-    height: string,
+    width?: string,
+    height?: string,
     variant?: ComponentVariants,
 }
 
@@ -37,7 +37,7 @@ overflow: auto;
     background: ${(props) => getVariantColor(props.$variant!, props.theme, "hoverBg")};
 }
 `
-const Box = ({ children, width, height, variant = "default" }: BoxProps) => {
+const Box = ({ children, width="fit-content", height="fit-content", variant = "default" }: BoxProps) => {
     return (
         <StyledBox $width={width} $height={height} $variant={variant}>
             {children}

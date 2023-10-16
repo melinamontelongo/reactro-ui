@@ -46,7 +46,7 @@ const getContainerSizes = (props: ContainerProps) => {
 }
 
 const StyledContainer = styled.div<ContainerProps>`
-    ${(props) => props.size ? getContainerSizes(props) : "width: 100%"}
+    ${(props) => props.size ? getContainerSizes(props) : "width: 100%;"}
     margin: auto;
 `
 const Container = ({ children, size }: ContainerProps) => {
