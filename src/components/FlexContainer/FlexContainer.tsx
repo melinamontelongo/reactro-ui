@@ -28,7 +28,7 @@ const StyledContainer = styled.div<StyledFlexContainerProps>`
     flex-wrap: wrap;
 `
 
-const FlexContainer = ({ children, direction = "row", justifyContent = "start", alignItems = "start", gap = "0px", wrap="wrap", width = "fit-content", ...props }: FlexContainerProps) => {
+const FlexContainer = ({ children, direction = "row", justifyContent = "start", alignItems = "start", gap = "0px", wrap="wrap", width = "100%", ...props }: FlexContainerProps) => {
     return (
         <StyledContainer $direction={direction} $justifyContent={justifyContent} $alignItems={alignItems} $gap={gap} $wrap={wrap} $width={width} {...props}>
             {children}
