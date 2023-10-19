@@ -1,14 +1,14 @@
-import React, { MouseEventHandler } from "react";
+import React, { HTMLAttributes, MouseEventHandler } from "react";
 import styled from "styled-components";
 import Button from "../Button/Button";
 import { getBaseProperty, getVariantColor } from "../../utils/variants";
 import { ComponentVariants } from "../ThemeProvider/ThemeProvider";
 
-export interface DialogProps {
+export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
     width?: string,
     height?: string,
     title: string,
-    content: React.ReactNode,
+    dialogContent: React.ReactNode,
     footer?: React.ReactNode,
     onClose?: MouseEventHandler<HTMLButtonElement>,
     variant?: ComponentVariants,
@@ -61,9 +61,9 @@ const StyledDialog = styled.div<Pick<StyledDialogProps, "$width" | "$variant">>`
     background-color: ${(props) => getVariantColor(props.$variant, props.theme, "hoverBg")};
     border: ${(props) => props.theme.borderOutset} ${(props) => getVariantColor(props.$variant, props.theme, "shadow")};
     `
-const Dialog = ({ width = "fit-content", height = "fit-content", title, content, footer, onClose, variant = "default" }: DialogProps) => {
+const Dialog = ({ width = "fit-content", height = "fit-content", title, dialogContent, footer, onClose, variant = "default", ...props }: DialogProps) => {
     return (
-        <StyledDialog $width={width} $variant={variant}>
+        <StyledDialog $width={width} $variant={variant} {...props}>
             <TitleBar $variant={variant}>
                 <Title>
                     {title}
@@ -72,7 +72,7 @@ const Dialog = ({ width = "fit-content", height = "fit-content", title, content,
             </TitleBar>
             <ContentContainer $height={height} $variant={variant}>
                 <div>
-                    {content}
+                    {dialogContent}
                 </div>
                 <div>
                     {footer}
