@@ -5,7 +5,7 @@ import { getBaseProperty, getVariantColor } from "../../utils/variants";
 import Dropdown, { DropdownContainer } from "../Dropdown/Dropdown";
 
 interface NavbarProps extends HTMLAttributes<HTMLDivElement> {
-    items?: React.ReactNode[],
+    items?: React.ReactNode,
     brand?: React.ReactNode,
     variant?: ComponentVariants,
 }
@@ -68,14 +68,10 @@ const Navbar = ({ items, brand, variant = "default" }: NavbarProps) => {
                     {brand}
                 </Brand>
                 <Items>
-                    {items && items?.map((item) => {
-                        return <>{item}</>
-                    })}
+                    {items}
                 </Items>
                 <ResponsiveItems text="..." isList={false} variant={variant}>
-                    {items && items?.map((item) => {
-                        return <>{item}</>
-                    })}
+                    {items}
                 </ResponsiveItems>
             </Container>
         </StyledNavbar>
