@@ -13,6 +13,7 @@ export { default as Navbar } from "./Navbar";
 export { default as Progress } from "./Progress";
 export { default as Radio } from "./Radio";
 export { default as Select } from "./Select";
+export { default as Taskbar } from "./Taskbar";
 export { default as Text } from "./Text";
 export { default as Textarea } from "./Textarea";
 export { default as ThemeProvider } from "./ThemeProvider";
