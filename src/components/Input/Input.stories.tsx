@@ -18,7 +18,7 @@ export const Label: Story = (args) => (
 )
 
 Label.args = {
-    id: "no-label-input-name",
+    id: "label-input-name",
     type: "text",
     label: "Name",
     placeholder: "Your name...",
@@ -45,7 +45,7 @@ export const Group: Story = {
             <Input type="number" id="input-number" label="Number" placeholder="I can also be type number..." />
             <Input type="email" id="input-email" label="Email" placeholder="Or email..." />
             <Input type="tel" id="input-tel" label="Telephone" placeholder="Or tel..." />
-            <Input type="url" id="input-tel" label="Url" placeholder="Even url!" />
+            <Input type="url" id="input-url" label="Url" placeholder="Even url!" />
         </Fieldset>
     </>
 }
