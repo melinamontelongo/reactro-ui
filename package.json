@@ -1,6 +1,6 @@
 {
   "name": "reactro-ui-lib",
-  "version": "2.1.4",
+  "version": "2.2.0",
   "description": "A retro-inspired component library for React",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
