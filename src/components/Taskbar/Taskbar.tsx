@@ -71,7 +71,7 @@ const Taskbar = ({ start, elements, variant = "default" }: TaskbarProps) => {
           setDate(getDate());
         }, 1000);
         return () => clearTimeout(timer);
-      }, []);
+      }, [date]);
     
     return (
         <StyledTaskbar $variant={variant}>
