@@ -76,7 +76,6 @@ const Taskbar = ({ start, elements, variant = "default" }: TaskbarProps) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setDate(getDate());
-            console.log(date, "changing date")
         }, 1000);
         return () => clearTimeout(timer);
     }, [date]);
