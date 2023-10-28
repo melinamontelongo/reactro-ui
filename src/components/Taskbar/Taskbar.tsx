@@ -60,19 +60,27 @@ const Time = styled(Button)`
 `
 
 const getDate = () => {
-    return new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: false });
+    return new Date().toLocaleTimeString("en-US", { hour12: false });
 }
-
+//  Returns date without seconds
+const formatDate = (date: string): string => {
+    const dateArr = date.split(":");
+    //  Remove seconds
+    dateArr.pop();
+    //  Join date again
+    return dateArr.join(":")
+}
 const Taskbar = ({ start, elements, variant = "default" }: TaskbarProps) => {
     const [date, setDate] = useState<string>(getDate());
-    
+
     useEffect(() => {
         const timer = setTimeout(() => {
-          setDate(getDate());
+            setDate(getDate());
+            console.log(date, "changing date")
         }, 1000);
         return () => clearTimeout(timer);
-      }, [date]);
-    
+    }, [date]);
+
     return (
         <StyledTaskbar $variant={variant}>
             <FlexContainer justifyContent="space-between" alignItems="center">
@@ -80,7 +88,7 @@ const Taskbar = ({ start, elements, variant = "default" }: TaskbarProps) => {
                     {elements}
                 </StartBtn>
                 <Time variant={variant}>
-                    {date}
+                    {formatDate(date)}
                 </Time>
             </FlexContainer>
         </StyledTaskbar>
