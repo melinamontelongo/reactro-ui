@@ -1,6 +1,7 @@
 export { default as Box } from "./Box";
 export { default as Button } from "./Button";
 export { default as Checkbox } from "./Checkbox";
+export { default as Circle } from "./Circle";
 export { default as Container } from "./Container";
 export { default as Dialog } from "./Dialog";
 export { default as Dropdown } from "./Dropdown";
