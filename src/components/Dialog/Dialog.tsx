@@ -12,19 +12,24 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
     footer?: React.ReactNode,
     onClose?: MouseEventHandler<HTMLButtonElement>,
     variant?: ComponentVariants,
+    justifyContent?: "start" | "end" | "center" | "space-between" | "space-around" | "space-evenly" | "stretch" | "normal",
+    alignItems?: "stretch" | "center" | "start" | "end" | "normal"
 }
 
-export interface StyledDialogProps extends Omit<DialogProps, "variant" | "height" | "width"> {
+export interface StyledDialogProps extends Omit<DialogProps, "variant" | "height" | "width" | "justifyContent" | "alignItems"> {
     $variant: ComponentVariants,
     $height: string,
     $width: string,
+    $justifyContent?: "start" | "end" | "center" | "space-between" | "space-around" | "space-evenly" | "stretch" | "normal",
+    $alignItems?: "stretch" | "center" | "start" | "end" | "normal"
 }
 
-const ContentContainer = styled.div<Pick<StyledDialogProps, "$height" | "$variant">>`
+const ContentContainer = styled.div<Pick<StyledDialogProps, "$height" | "$variant" | "$justifyContent" | "$alignItems">>`
     height: ${(props) => props.$height};
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: ${(props) => props.$justifyContent};
+    align-items: ${(props) => props.$alignItems};
     padding: 5px 15px;
     overflow: auto;
     &::-webkit-scrollbar {
@@ -61,7 +66,11 @@ const StyledDialog = styled.div<Pick<StyledDialogProps, "$width" | "$variant">>`
     background-color: ${(props) => getVariantColor(props.$variant, props.theme, "hoverBg")};
     border: ${(props) => props.theme.borderOutset} ${(props) => getVariantColor(props.$variant, props.theme, "shadow")};
     `
-const Dialog = ({ width = "fit-content", height = "fit-content", title, dialogContent, footer, onClose, variant = "default", ...props }: DialogProps) => {
+
+const DialogFooter = styled.div`
+    padding: 15px 5px;
+    `
+const Dialog = ({ width = "fit-content", height = "fit-content", title, dialogContent, footer, onClose, variant = "default", justifyContent = "space-between", alignItems = "normal", ...props }: DialogProps) => {
     return (
         <StyledDialog $width={width} $variant={variant} {...props}>
             <TitleBar $variant={variant}>
@@ -70,13 +79,15 @@ const Dialog = ({ width = "fit-content", height = "fit-content", title, dialogCo
                 </Title>
                 <Button size="sm" onClick={onClose} variant={variant}>X</Button>
             </TitleBar>
-            <ContentContainer $height={height} $variant={variant}>
+            <ContentContainer $height={height} $variant={variant} $justifyContent={justifyContent} $alignItems={alignItems}>
                 <div>
                     {dialogContent}
                 </div>
-                <div>
-                    {footer}
-                </div>
+                {footer &&
+                    <DialogFooter>
+                        {footer}
+                    </DialogFooter>
+                }
             </ContentContainer>
         </StyledDialog>
     )
