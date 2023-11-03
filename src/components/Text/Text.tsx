@@ -9,15 +9,19 @@ export interface TextProps extends HTMLAttributes<HTMLHeadingElement | HTMLParag
     fontFamily?: FontFamily,
     align?: "start" | "end" | "center" | "left" | "right"
 }
-
-const StyledText = styled.div<Pick<TextProps, "fontSize" | "fontFamily" | "align">>`
-    font-size: ${(props) => props.fontSize};
-    font-family: ${(props) => props.fontFamily};
-    text-align: ${(props) => props.align};
+export interface StyledTextProps extends Pick<TextProps, "children" | "tag"> {
+    $fontSize?: string,
+    $fontFamily?: FontFamily,
+    $align?: "start" | "end" | "center" | "left" | "right"
+}
+const StyledText = styled.div<StyledTextProps>`
+    font-size: ${(props) => props.$fontSize};
+    font-family: ${(props) => props.$fontFamily};
+    text-align: ${(props) => props.$align};
 `
 const Text = ({ children, tag = "p", fontSize = "1rem", fontFamily = "retro", align = "left" }: TextProps) => {
     return (
-        <StyledText as={tag} fontSize={fontSize} fontFamily={fontFamily} align={align}>
+        <StyledText as={tag} $fontSize={fontSize} $fontFamily={fontFamily} $align={align}>
             {children}
         </StyledText>
     )
