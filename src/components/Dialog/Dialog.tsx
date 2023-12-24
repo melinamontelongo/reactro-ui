@@ -64,7 +64,7 @@ const StyledDialog = styled.div<Pick<StyledDialogProps, "$width" | "$variant">>`
     width: ${(props) => props.$width};
     min-width: min-content;
     background-color: ${(props) => getVariantColor(props.$variant, props.theme, "hoverBg")};
-    border: ${(props) => props.theme.borderOutset} ${(props) => getVariantColor(props.$variant, props.theme, "shadow")};
+    outline: ${(props) => props.theme.borderOutset} ${(props) => getVariantColor(props.$variant, props.theme, "shadow")};
     `
 
 const DialogFooter = styled.div`
