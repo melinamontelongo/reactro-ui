@@ -25,6 +25,8 @@ const StyledTaskbar = styled.div<StyledTaskbarProps>`
     height: 2.2rem;
     background-color: ${(props) => getVariantColor(props.$variant!, props.theme, "bg")};
     border: ${(props) => getBaseProperty(props.theme, "borderOutset")} ${(props) => getVariantColor(props.$variant!, props.theme, "shadow")};
+    border-bottom: none;
+    user-select: none;
     `
 
 const StartBtn = styled(Dropdown)`
@@ -55,6 +57,7 @@ const Time = styled(Button)`
     }
     &:active, &:focus{
         background-color: unset;
+        border: none;
         color: ${(props) => getVariantColor(props.variant!, props.theme, "color")};
     }
 `
