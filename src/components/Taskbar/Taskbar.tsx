@@ -73,7 +73,7 @@ const formatDate = (date: string): string => {
     //  Join date again
     return dateArr.join(":")
 }
-const Taskbar = ({ start, elements, variant = "default" }: TaskbarProps) => {
+const Taskbar = ({ start, elements, variant = "default", ...props }: TaskbarProps) => {
     const [date, setDate] = useState<string>(getDate());
 
     useEffect(() => {
@@ -84,7 +84,7 @@ const Taskbar = ({ start, elements, variant = "default" }: TaskbarProps) => {
     }, [date]);
 
     return (
-        <StyledTaskbar $variant={variant}>
+        <StyledTaskbar $variant={variant} {...props}>
             <FlexContainer justifyContent="space-between" alignItems="center">
                 <StartBtn text={start} variant={variant}>
                     {elements}
