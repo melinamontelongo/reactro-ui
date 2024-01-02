@@ -45,13 +45,13 @@ const Select = ({ variant = "default", label, placeholder, children, ...props }:
     return (<>
         {label ?
             <Label>{label}
-                <StyledSelect $variant={variant} {...props} defaultValue="">
+                <StyledSelect $variant={variant} {...props}>
                     {placeholder && <option value="" disabled className="placeholder-option">{placeholder}</option>}
                     {children}
                 </StyledSelect>
             </Label>
             :
-            <StyledSelect $variant={variant} {...props} >
+            <StyledSelect $variant={variant} {...props}>
                 {placeholder && <option value="" disabled className="placeholder-option">{placeholder}</option>}
                 {children}
             </StyledSelect>
