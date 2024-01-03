@@ -4,7 +4,7 @@ import { getBaseProperty, getVariantColor, getVariantPadding } from "../../utils
 import { ComponentVariants, Sizes } from "../ThemeProvider/ThemeProvider";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    children?: string;
+    children?: React.ReactNode;
     variant?: ComponentVariants;
     size?: Sizes,
 }
